@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    /*background-color: rgb(38, 38, 38);*/
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 header {
@@ -52,7 +53,6 @@ header button:hover {
 }   
 
 header #Home {
-    margin-right: 30vw;
     margin-right: auto;
 }
 
@@ -66,10 +66,12 @@ header #essential-albums {
 }
 
 .main-screen {
-    background-image: url("https://rockandrollglobe.com/wp-content/uploads/2018/12/rah_42077127905.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 105vh;
+    /*background-image: url("https://rockandrollglobe.com/wp-content/uploads/2018/12/rah_42077127905.jpg");
+    background-size: cover;*/
+    background: rgb(52,52,52);
+    background: linear-gradient(90deg, rgba(52,52,52,1) 8%, rgba(16,16,16,1) 100%);    
+    height: 160vh;
+    width: 100vw;
     margin-top: -4px;
     color: white;
     display: flex;
@@ -78,69 +80,49 @@ header #essential-albums {
 }
 
 .main-screen .big-title {
-    padding-top: 140px;
+    padding-top: 130px;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;    
 }
 
 .main-screen .big-title h1{
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Nunito Sans', sans-serif;    
-    font-size: 5vw;
+    font-size: 5em;
     font-weight: 200;
 }
 
-.exposition {
-    background-image: url("https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F03258730-60e1-11eb-8bcc-6c1a7cf205dd.jpg?crop=7676%2C4318%2C237%2C1073&resize=1500");
-    background-size: cover;
-    background-position: center;
-    height: 105vh;
+.exposition-text {
     color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    position: relative;
-}
-
-.exposition::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.8);   
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.exposition-text {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
     max-width: 40vw;
-    height: 50vh;
-    margin-left: 30vw;
-    margin-top: 10vh;
-    justify-content: space-between;
+    height: 30vh;
+    padding-top: 10vh;
     font-family: 'Asap Condensed', sans-serif;
     line-height: 2;
     font-size: large;
 }
 
-.song {
-    width: 100%;
+.slider-container {
+    width: 10000vw;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    font-family: 'Asap Condensed', sans-serif;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
+    transition: transform .5s ease-in-out;
+}
+
+.song {
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
     font-family: 'Ubuntu', sans-serif;
-    margin-right: 50vw;
+    position: relative;
 }
 
 .song img{
     width: 400px;
     height: 400px;
-    margin: 80px 0 0 3vw;   
+    margin: 80px 0 0 8vw; 
 }
 
 .song-info {
@@ -148,17 +130,8 @@ header #essential-albums {
     padding-right: 3vw;
 }
 
-.song .song-info #song-title {
+.song .song-info .song-title {
     padding-left: 6vw;
-    justify-content: right;
-}
-
-.ubuntu-font {
-    font-family: 'Asap Condensed', sans-serif;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Nunito Sans', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-    font-style: italic;
 }
 
 .song .number-name {
@@ -189,9 +162,9 @@ header #essential-albums {
     transition: transform 0.3s ease; 
 }
   
-  .song a:hover::after {
+.song a:hover::after {
     transform: scaleX(1); 
-    transform-origin: bottom left; /
+    transform-origin: bottom left; 
 }
   
 .song a:active {
@@ -205,7 +178,7 @@ header #essential-albums {
 }
 
 .song .date {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 0;
 }
 
@@ -214,20 +187,52 @@ header #essential-albums {
     font-size: 1.5em;
 }
 
-.song .move-left, .move-right {
+.slider-parent {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.move-left, .move-right {
     background-color: transparent;
     border: none;
     font-size: 3em;
     cursor: pointer;
     transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out;
     opacity: .3;
     padding-left: 2vw;
     padding-right: 2vw;
-
+    height: 100%;
+    position: absolute;
 }
 
-.song .move-left:hover, .move-right:hover {
+.move-left:hover, .move-right:hover {
     opacity: 1;
     background-color: rgba(214, 214, 214, 0.271);
+}
+
+
+.move-left {
+    top: 0;
+    left: 0;
+}
+
+.move-right {
+    top: 0;
+    right: 0;
+}
+
+footer {
+    background-color: rgb(58, 58, 58);
+    margin: -16px;
+    letter-spacing: .2em;
+    color: rgb(172, 172, 172);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 8vh;
+}
+
+#Default {
+    background: rgb(144,144,144);
+    background: linear-gradient(330deg, rgba(144,144,144,0.8464635854341737) 8%, rgba(113,113,113,0.756827731092437) 38%, rgba(209,209,209,1) 100%);
 }

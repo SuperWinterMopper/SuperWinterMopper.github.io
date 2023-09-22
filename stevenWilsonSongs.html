@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="EAStyles.css">
+    <link rel="stylesheet" href="SWStyles.css">
     <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&family=Nunito+Sans:opsz,wght@6..12,200&family=Nunito:wght@200&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <title>Acton Healy</title>
 </head>
 <body>
@@ -43,52 +44,51 @@
                 <p3 class="inner-explanation">Disclaimer:</p3>
                 </div>
         </section>
-        <div class="slider-container">
-            <section class="song" style="background: rgb(34,193,195); background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(1,179,96,1) 100%, rgba(1,179,96,1) 100%);">
-                <button class="move-left"><</button>
-                <img class="coverart"src="https://f4.bcbits.com/img/a4010244267_10.jpg"/>
-                <div class="song-info">
-                <h1 class="number-name">#100 <span id="song-title"><a href="https://open.spotify.com/track/1qpLJP1vxMH34vle6etZIz?si=206fc371506a46c3" target="_blank">Pure Narcotic</a></span></h1>
-                    <p class="location">On <span class="ubuntu-font">Stupid Dream</span> by Porcupine Tree</p>
-                    <p class="date">1997</p>
-                    <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+        <div class="slider-parent">
+            <div class="slider-container">
+                <div class="song" id="StupidDream">
+                    <img class="coverart"src="https://f4.bcbits.com/img/a4010244267_10.jpg"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#100 <span id="song-title"><a href="https://open.spotify.com/track/1qpLJP1vxMH34vle6etZIz?si=206fc371506a46c3" target="_blank">Pure Narcotic</a></span></h1>
+                        <p class="location">On <span style="font-style: italic;">Stupid Dream</span> by Porcupine Tree</p>
+                        <p class="date">1997</p>
+                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                    </div>
                 </div>
-                <button class="move-right">></button>
-            </section>
-            <section class="song" style="background: rgb(40,79,196);
-            background: linear-gradient(60deg, rgba(40,79,196,1) 8%, rgba(139,106,185,1) 100%, rgba(7,60,144,1) 100%);">
-                <img class="coverart"src="https://f4.bcbits.com/img/a0333974503_10.jpg"/>
-                <div class="song-info">
-                <h1 class="number-name">#99 <span id="song-title"><a href="https://open.spotify.com/track/0kiaVCnEEFQWIbEd9bjqAe?si=625d150454fb40a5" target="_blank">Sleep Together</a></span></h1>
-                    <p class="location">On <span class="ubuntu-font">Fear of a Blank Planet</span> by Porcupine Tree</p>
-                    <p class="date">2007</p>
-                    <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                <div class="song" id="FearOfABlankPlanet">
+                    <img class="coverart"src="https://f4.bcbits.com/img/a0333974503_10.jpg"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#99 <span id="song-title"><a href="https://open.spotify.com/track/0kiaVCnEEFQWIbEd9bjqAe?si=625d150454fb40a5" target="_blank">Sleep Together</a></span></h1>
+                        <p class="location">On <span style="font-style: italic;">Fear of a Blank Planet</span> by Porcupine Tree</p>
+                        <p class="date">2007</p>
+                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                    </div>
                 </div>
-            </section>
-            <section class="song" style="background: rgb(230,175,205);
-            background: linear-gradient(180deg, rgba(230,175,205,1) 22%, rgba(148,187,233,1) 100%);
-            ">
-                <img class="coverart"src="https://f4.bcbits.com/img/a3258147407_10.jpg"/>
-                <div class="song-info">
-                <h1 class="number-name" style="font-size: 64px;">#98 <span id="song-title"><a href="https://open.spotify.com/track/30bNQdHtlEKCHyc8bGAVI4?si=a36883cdabc84c64" target="_blank">Veneno Para Las Hadas</a></span></h1>
-                    <p class="location">On <span class="ubuntu-font">Insurgentes</span> by Steven Wilson (solo)</p>
-                    <p class="date">2008</p>
-                    <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                <div class="song" id="Insurgentes">
+                    <img class="coverart"src="https://f4.bcbits.com/img/a3258147407_10.jpg"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#98 <span id="song-title"><a href="https://open.spotify.com/track/30bNQdHtlEKCHyc8bGAVI4?si=a36883cdabc84c64" target="_blank" style="font-size: 58px;">Veneno Para Las Hadas</a></span></h1>
+                        <p class="location">On <span style="font-style: italic;">Insurgentes</span> by Steven Wilson (solo)</p>
+                        <p class="date">2008</p>
+                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                    </div>
                 </div>
-            </section>
-            </section>
-            <section class="song" style="background: rgb(124,149,255);
-            background: linear-gradient(90deg, rgba(124,149,255,1) 13%, rgba(45,216,230,1) 100%);">
-                <img class="coverart"src="https://f4.bcbits.com/img/a2189922416_10.jpg"/>
-                <div class="song-info">
-                <h1 class="number-name" style="font-size: 48px;">#97 <span id="song-title"><a href="https://open.spotify.com/track/0mMj6AgVKRNhCtC8c0Gzsz?si=0785ffcca6ad4cd3" target="_blank">The Sky Moves Sideways Phase 1</a></span></h1>
-                    <p class="location">On <span class="ubuntu-font">The Sky Moves Sideways</span> by Porcupine Tree</p>
-                    <p class="date">1995</p>
-                    <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                <div class="song" id="SkyMoveSideways">
+                    <img class="coverart"src="https://f4.bcbits.com/img/a2189922416_10.jpg"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#97 <span id="song-title"><a href="https://open.spotify.com/track/0mMj6AgVKRNhCtC8c0Gzsz?si=0785ffcca6ad4cd3" target="_blank" style="font-size: 42px;">The Sky Moves Sideways Phase 1</a></span></h1>
+                        <p class="location">On <span style="font-style: italic;">The Sky Moves Sideways</span> by Porcupine Tree</p>
+                        <p class="date">1995</p>
+                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                    </div>
                 </div>
-            </section>
-
+            </div>
+            <button class="move-left" onclick="moveSliderLeft()"><</button>
+            <button class="move-right" onclick="moveSliderRight()">></button> 
         </div>
     </main>
+    <footer>
+        <p>Made by: me!</p>
+    </footer>
 </body>
 </html>

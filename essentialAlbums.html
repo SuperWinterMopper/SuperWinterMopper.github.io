@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="SWStyles.css">
+    <link rel="stylesheet" href="EAStyles.css">
     <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap" rel="stylesheet">
-        <title>Acton Healy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&family=Nunito+Sans:opsz,wght@6..12,200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&family=Nunito+Sans:opsz,wght@6..12,200&family=Nunito:wght@200&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <title>Acton Healy</title>
 </head>
 <body>
     <header>
@@ -20,7 +30,104 @@
     </header>
     <div class="seperator-bold"></div>
     <main>
-        <div class="background"></div>
+        <main>
+            <section class="main-screen">
+                <div class="big-title">
+                    <h1>100 ESSENTIAL</h1>
+                    <h1>ALBUMS</h1>
+                    <div class="exposition-text">
+                        <p>My 100 essential albums, in release date order.</p>
+                        <p>I'd be happy if you looked at this with a lighthearted lens. These aren't the 100 most cricitally acclaimed, innovative albums I've listened to. They're simply the ones that are essential to my musical journey, and for that I think my musical DNA is pretty clear here.</p>
+                        <p>I of course love all of these albums, but if you think my list is awful, that's fine too! It's our differences that make it interesting.</p>
+                        <p>You're quickly going to find that there are certain musical approaches that I'm VERY drawn to. (hint: 1973 is my favorite year in music)</p>
+                        <p>Enjoy!</p>
+                    </div>    
+                </div>
+            </section>
+            <div class="slider-parent">
+                <div class="slider-container">
+                    <div class="song" id="Default">
+                        <img class="coverart" id="coverArt1"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#1 <span class="song-title" id="song-title1" style="font-size: 66px">Days of Future Passed</span></h1>
+                            <p class="location" id="location1"><span style="font-style: italic;">The Moody Blues</span></p>
+                            <p class="date" id="date1">10 November 1967</p>
+                            <p class="commentary" id="commentary1">It only feels right that my first album is arguably the very first progressive rock album. Honestly, this is the only Moody Blues album I would say I love, even though they have some really interesting material in later albums. Very conceptual, as with most of their work.</p>
+                            </div>
+                    </div>
+                    <div class="song" id="Default">
+                        <img class="coverart" id="coverArt2"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#2 <span class="song-title" id="song-title2" style="font-size: 66px"></span></h1>
+                            <p class="location" id="location2">By <span style="font-style: italic;"></span></p>
+                            <p class="date" id="date2"></p>
+                            <p class="commentary" id="commentary2"></p>
+                            </div>
+                    </div>
+                    <div class="song" id="Default">
+                        <img class="coverart" id="coverArt3"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#3 <span class="song-title" id="song-title3" style="font-size: 66px"></span></h1>
+                            <p class="location" id="location3"><span style="font-style: italic;"></span></p>
+                            <p class="date" id="date3"></p>
+                            <p class="commentary" id="commentary3"></p>
+                            </div>
+                    </div>
+                    <div class="song" id="Default">
+                        <img class="coverart" id="coverArt4"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#4 <span class="song-title" id="song-title4" style="font-size: 66px"></span></h1>
+                            <p class="location" id="location4"><span style="font-style: italic;"></span></p>
+                            <p class="date" id="date4"></p>
+                            <p class="commentary" id="commentary4"></p>
+                            </div>
+                    </div>
+                    <div class="song" id="Default">
+                        <img class="coverart" id="coverArt5"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#5 <span class="song-title" id="song-title5" style="font-size: 66px"></span></h1>
+                            <p class="location" id="location5"><span style="font-style: italic;"></span></p>
+                            <p class="date" id="date5"></p>
+                            <p class="commentary" id="commentary5"></p>
+                            </div>
+                    </div>
+                    <!--
+                    <div class="song" id="Default">
+                        <img class="coverart"src="https://www.psychedelicbabymag.com/wp-content/uploads/2011/09/Ultimate-Spinach-Behold-and-See-768x768.jpg"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#2 <span id="song-title">Behold & See</span></h1>
+                            <p class="location">By <span style="font-style: italic;">Ultimate Spinach</span></p>
+                            <p class="date">8 August 1968</p>
+                        </div>
+                    </div>
+                    <div class="song" id="Default">
+                        <img class="coverart"src="https://townsquare.media/site/295/files/2020/08/Led-Zeppelin-I.jpg"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#3 <span id="song-title">Led Zeppelin</span></h1>
+                            <p class="location">By <span style="font-style: italic;">Led Zeppelin</span></p>
+                            <p class="date">12 January 1969</p>
+                        </div>
+                    </div>
+                    <div class="song" id="Default">
+                        <img class="coverart" src="https://f4.bcbits.com/img/a2189922416_10.jpg"/>
+                        <div class="song-info">
+                        <h1 class="number-name">#97 <span id="song-title"><a href="https://open.spotify.com/track/0mMj6AgVKRNhCtC8c0Gzsz?si=0785ffcca6ad4cd3" target="_blank" style="font-size: 42px;">The Sky Moves Sideways Phase 1</a></span></h1>
+                            <p class="location">On <span style="font-style: italic;">The Sky Moves Sideways</span> by Porcupine Tree</p>
+                            <p class="date">1995</p>
+                            <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <button class="move-left" onclick="moveSliderLeft()"><</button>
+                <button class="move-right" onclick="moveSliderRight()">></button> 
+            </div>
+            <div class="list-form">
+            </div>
+        </main>
+        <footer>
+            <p>Made by: me!</p>
+        </footer>    
     </main>
 </body>
 </html>
