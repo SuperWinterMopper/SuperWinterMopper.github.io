@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SWStyles.css">
-    <script src="index.js"></script>
+    <script src="SW.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap" rel="stylesheet">
@@ -40,48 +40,913 @@
             <div class="exposition-text">
                 <p1 class="inner-explanation">My favorite Steven Wilson songs, ranked from #100 to #1.</p1>
                 <p2 class="inner-explanation">Why? Because Wilson is my favorite musician, and if I were to have a personal hero, it would be him. I have an intimate relationship with much of his music. To me, his career is a true work of art.</p2>
-                <p3 class="inner-explanation">This list covers many of Wilson's projects, including Porcupine Tree, No-Man, Storm Corrosion, and of course his solo work. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion. </p3>
-                <p3 class="inner-explanation">Disclaimer:</p3>
+                <p3 class="inner-explanation">This list covers many of Wilson's projects, including Porcupine Tree, No-Man, Storm Corrosion, and of course his solo work. </p3>
+                <p3 class="inner-explanation">Disclaimer: This list covers songs Steven wrote or co-wrote. It doesn't cover the songs he's remixed, produced or featured on as a guest.</p3>
                 </div>
         </section>
         <div class="slider-parent">
             <div class="slider-container">
-                <div class="song" id="StupidDream">
-                    <img class="coverart"src="https://f4.bcbits.com/img/a4010244267_10.jpg"/>
+                <div class="song" id="song100">
+                    <img class="coverart" id="coverArt100"/>
                     <div class="song-info">
-                    <h1 class="number-name">#100 <span id="song-title"><a href="https://open.spotify.com/track/1qpLJP1vxMH34vle6etZIz?si=206fc371506a46c3" target="_blank">Pure Narcotic</a></span></h1>
-                        <p class="location">On <span style="font-style: italic;">Stupid Dream</span> by Porcupine Tree</p>
-                        <p class="date">1997</p>
-                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
-                    </div>
+                    <h1 class="number-name">#100 <span class="song-title" id="song-title100" style="font-size: 66px"></span></h1>
+                        <p class="location">On <span style="font-style: italic;" id="location100"></span> by <span id="project100"></span></p>
+                        <p class="date" id="date100"></p>
+                        <p class="commentary" id="commentary100"></p>
+                        </div>
                 </div>
-                <div class="song" id="FearOfABlankPlanet">
-                    <img class="coverart"src="https://f4.bcbits.com/img/a0333974503_10.jpg"/>
+                <div class="song" id="song99">
+                    <img class="coverart" id="coverArt99"/>
                     <div class="song-info">
-                    <h1 class="number-name">#99 <span id="song-title"><a href="https://open.spotify.com/track/0kiaVCnEEFQWIbEd9bjqAe?si=625d150454fb40a5" target="_blank">Sleep Together</a></span></h1>
-                        <p class="location">On <span style="font-style: italic;">Fear of a Blank Planet</span> by Porcupine Tree</p>
-                        <p class="date">2007</p>
-                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
-                    </div>
+                    <h1 class="number-name">#99 <span class="song-title" id="song-title99" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location99"></span> by <span id="project99"></span></p>
+                    <p class="date" id="date99"></p>
+                        <p class="commentary" id="commentary99"></p>
+                        </div>
                 </div>
-                <div class="song" id="Insurgentes">
-                    <img class="coverart"src="https://f4.bcbits.com/img/a3258147407_10.jpg"/>
+                <div class="song" id="song98">
+                    <img class="coverart" id="coverArt98"/>
                     <div class="song-info">
-                    <h1 class="number-name">#98 <span id="song-title"><a href="https://open.spotify.com/track/30bNQdHtlEKCHyc8bGAVI4?si=a36883cdabc84c64" target="_blank" style="font-size: 58px;">Veneno Para Las Hadas</a></span></h1>
-                        <p class="location">On <span style="font-style: italic;">Insurgentes</span> by Steven Wilson (solo)</p>
-                        <p class="date">2008</p>
-                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
-                    </div>
+                    <h1 class="number-name">#98 <span class="song-title" id="song-title98" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location98"></span> by <span id="project98"></span></p>
+                    <p class="date" id="date98"></p>
+                        <p class="commentary" id="commentary98"></p>
+                        </div>
                 </div>
-                <div class="song" id="SkyMoveSideways">
-                    <img class="coverart"src="https://f4.bcbits.com/img/a2189922416_10.jpg"/>
+                <div class="song" id="song97">
+                    <img class="coverart" id="coverArt97"/>
                     <div class="song-info">
-                    <h1 class="number-name">#97 <span id="song-title"><a href="https://open.spotify.com/track/0mMj6AgVKRNhCtC8c0Gzsz?si=0785ffcca6ad4cd3" target="_blank" style="font-size: 42px;">The Sky Moves Sideways Phase 1</a></span></h1>
-                        <p class="location">On <span style="font-style: italic;">The Sky Moves Sideways</span> by Porcupine Tree</p>
-                        <p class="date">1995</p>
-                        <p class="commentary">That sure is a good song. However, please note that this entirely arbitrary, and my preferences will defintely evole pretty much immediately after the list's completion.</p>
-                    </div>
+                    <h1 class="number-name">#97 <span class="song-title" id="song-title97" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location97"></span> by <span id="project97"></span></p>
+                    <p class="date" id="date97"></p>
+                        <p class="commentary" id="commentary97"></p>
+                        </div>
                 </div>
+                <div class="song" id="song96">
+                    <img class="coverart" id="coverArt96"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#96 <span class="song-title" id="song-title96" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location96"></span> by <span id="project96"></span></p>
+                    <p class="date" id="date96"></p>
+                        <p class="commentary" id="commentary96"></p>
+                        </div>
+                </div>
+                <div class="song" id="song95">
+                    <img class="coverart" id="coverArt95"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#95 <span class="song-title" id="song-title95" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location95"></span> by <span id="project95"></span></p>
+                    <p class="date" id="date95"></p>
+                        <p class="commentary" id="commentary95"></p>
+                        </div>
+                </div>
+                <div class="song" id="song94">
+                    <img class="coverart" id="coverArt94"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#94 <span class="song-title" id="song-title94" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location94"></span> by <span id="project94"></span></p>
+                    <p class="date" id="date94"></p>
+                        <p class="commentary" id="commentary94"></p>
+                        </div>
+                </div>
+                <div class="song" id="song93">
+                    <img class="coverart" id="coverArt93"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#93 <span class="song-title" id="song-title93" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location93"></span> by <span id="project93"></span></p>
+                    <p class="date" id="date93"></p>
+                        <p class="commentary" id="commentary93"></p>
+                        </div>
+                </div>
+                <div class="song" id="song92">
+                    <img class="coverart" id="coverArt92"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#92 <span class="song-title" id="song-title92" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location92"></span> by <span id="project92"></span></p>
+                    <p class="date" id="date92"></p>
+                        <p class="commentary" id="commentary92"></p>
+                        </div>
+                </div>
+                <div class="song" id="song91">
+                    <img class="coverart" id="coverArt91"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#91 <span class="song-title" id="song-title91" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location91"></span> by <span id="project91"></span></p>
+                    <p class="date" id="date91"></p>
+                        <p class="commentary" id="commentary91"></p>
+                        </div>
+                </div>
+                <div class="song" id="song90">
+                    <img class="coverart" id="coverArt90"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#90 <span class="song-title" id="song-title90" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location90"></span> by <span id="project90"></span></p>
+                    <p class="date" id="date90"></p>
+                        <p class="commentary" id="commentary90"></p>
+                        </div>
+                </div>
+                <div class="song" id="song89">
+                    <img class="coverart" id="coverArt89"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#89 <span class="song-title" id="song-title89" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location89"></span> by <span id="project89"></span></p>
+                    <p class="date" id="date89"></p>
+                        <p class="commentary" id="commentary89"></p>
+                        </div>
+                </div>
+                <div class="song" id="song88">
+                    <img class="coverart" id="coverArt88"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#88 <span class="song-title" id="song-title88" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location88"></span> by <span id="project88"></span></p>
+                    <p class="date" id="date88"></p>
+                        <p class="commentary" id="commentary88"></p>
+                        </div>
+                </div>
+                <div class="song" id="song87">
+                    <img class="coverart" id="coverArt87"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#87 <span class="song-title" id="song-title87" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location87"></span> by <span id="project87"></span></p>
+                    <p class="date" id="date87"></p>
+                        <p class="commentary" id="commentary87"></p>
+                        </div>
+                </div>
+                <div class="song" id="song86">
+                    <img class="coverart" id="coverArt86"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#86 <span class="song-title" id="song-title86" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location86"></span> by <span id="project86"></span></p>
+                    <p class="date" id="date86"></p>
+                        <p class="commentary" id="commentary86"></p>
+                        </div>
+                </div>
+                <div class="song" id="song85">
+                    <img class="coverart" id="coverArt85"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#85 <span class="song-title" id="song-title85" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location85"></span> by <span id="project85"></span></p>
+                    <p class="date" id="date85"></p>
+                        <p class="commentary" id="commentary85"></p>
+                        </div>
+                </div>
+                <div class="song" id="song84">
+                    <img class="coverart" id="coverArt84"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#84 <span class="song-title" id="song-title84" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location84"></span> by <span id="project84"></span></p>
+                    <p class="date" id="date84"></p>
+                        <p class="commentary" id="commentary84"></p>
+                        </div>
+                </div>
+                <div class="song" id="song83">
+                    <img class="coverart" id="coverArt83"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#83 <span class="song-title" id="song-title83" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location83"></span> by <span id="project83"></span></p>
+                    <p class="date" id="date83"></p>
+                        <p class="commentary" id="commentary83"></p>
+                        </div>
+                </div>
+                <div class="song" id="song82">
+                    <img class="coverart" id="coverArt82"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#82 <span class="song-title" id="song-title82" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location82"></span> by <span id="project82"></span></p>
+                    <p class="date" id="date82"></p>
+                        <p class="commentary" id="commentary82"></p>
+                        </div>
+                </div>
+                <div class="song" id="song81">
+                    <img class="coverart" id="coverArt81"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#81 <span class="song-title" id="song-title81" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location81"></span> by <span id="project81"></span></p>
+                    <p class="date" id="date81"></p>
+                        <p class="commentary" id="commentary81"></p>
+                        </div>
+                </div>
+                <div class="song" id="song80">
+                    <img class="coverart" id="coverArt80"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#80 <span class="song-title" id="song-title80" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location80"></span> by <span id="project80"></span></p>
+                    <p class="date" id="date80"></p>
+                        <p class="commentary" id="commentary80"></p>
+                        </div>
+                </div>
+                <div class="song" id="song79">
+                    <img class="coverart" id="coverArt79"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#79 <span class="song-title" id="song-title79" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location79"></span> by <span id="project79"></span></p>
+                    <p class="date" id="date79"></p>
+                        <p class="commentary" id="commentary79"></p>
+                        </div>
+                </div>
+                <div class="song" id="song78">
+                    <img class="coverart" id="coverArt78"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#78 <span class="song-title" id="song-title78" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location78"></span> by <span id="project78"></span></p>
+                    <p class="date" id="date78"></p>
+                        <p class="commentary" id="commentary78"></p>
+                        </div>
+                </div>
+                <div class="song" id="song77">
+                    <img class="coverart" id="coverArt77"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#77 <span class="song-title" id="song-title77" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location77"></span> by <span id="project77"></span></p>
+                    <p class="date" id="date77"></p>
+                        <p class="commentary" id="commentary77"></p>
+                        </div>
+                </div>
+                <div class="song" id="song76">
+                    <img class="coverart" id="coverArt76"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#76 <span class="song-title" id="song-title76" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location76"></span> by <span id="project76"></span></p>
+                    <p class="date" id="date76"></p>
+                        <p class="commentary" id="commentary76"></p>
+                        </div>
+                </div>
+                <div class="song" id="song75">
+                    <img class="coverart" id="coverArt75"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#75 <span class="song-title" id="song-title75" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location75"></span> by <span id="project75"></span></p>
+                    <p class="date" id="date75"></p>
+                        <p class="commentary" id="commentary75"></p>
+                        </div>
+                </div>
+                <div class="song" id="song74">
+                    <img class="coverart" id="coverArt74"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#74 <span class="song-title" id="song-title74" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location74"></span> by <span id="project74"></span></p>
+                    <p class="date" id="date74"></p>
+                        <p class="commentary" id="commentary74"></p>
+                        </div>
+                </div>
+                <div class="song" id="song73">
+                    <img class="coverart" id="coverArt73"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#73 <span class="song-title" id="song-title73" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location73"></span> by <span id="project73"></span></p>
+                    <p class="date" id="date73"></p>
+                        <p class="commentary" id="commentary73"></p>
+                        </div>
+                </div>
+                <div class="song" id="song72">
+                    <img class="coverart" id="coverArt72"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#72 <span class="song-title" id="song-title72" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location72"></span> by <span id="project72"></span></p>
+                    <p class="date" id="date72"></p>
+                        <p class="commentary" id="commentary72"></p>
+                        </div>
+                </div>
+                <div class="song" id="song71">
+                    <img class="coverart" id="coverArt71"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#71 <span class="song-title" id="song-title71" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location71"></span> by <span id="project71"></span></p>
+                    <p class="date" id="date71"></p>
+                        <p class="commentary" id="commentary71"></p>
+                        </div>
+                </div>
+                <div class="song" id="song70">
+                    <img class="coverart" id="coverArt70"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#70 <span class="song-title" id="song-title70" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location70"></span> by <span id="project70"></span></p>
+                    <p class="date" id="date70"></p>
+                        <p class="commentary" id="commentary70"></p>
+                        </div>
+                </div>
+                <div class="song" id="song69">
+                    <img class="coverart" id="coverArt69"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#69 <span class="song-title" id="song-title69" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location69"></span> by <span id="project69"></span></p>
+                    <p class="date" id="date69"></p>
+                        <p class="commentary" id="commentary69"></p>
+                        </div>
+                </div>
+                <div class="song" id="song68">
+                    <img class="coverart" id="coverArt68"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#68 <span class="song-title" id="song-title68" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location68"></span> by <span id="project68"></span></p>
+                    <p class="date" id="date68"></p>
+                        <p class="commentary" id="commentary68"></p>
+                        </div>
+                </div>
+                <div class="song" id="song67">
+                    <img class="coverart" id="coverArt67"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#67 <span class="song-title" id="song-title67" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location67"></span> by <span id="project67"></span></p>
+                    <p class="date" id="date67"></p>
+                        <p class="commentary" id="commentary67"></p>
+                        </div>
+                </div>
+                <div class="song" id="song66">
+                    <img class="coverart" id="coverArt66"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#66 <span class="song-title" id="song-title66" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location66"></span> by <span id="project66"></span></p>
+                    <p class="date" id="date66"></p>
+                        <p class="commentary" id="commentary66"></p>
+                        </div>
+                </div>
+                <div class="song" id="song65">
+                    <img class="coverart" id="coverArt65"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#65 <span class="song-title" id="song-title65" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location65"></span> by <span id="project65"></span></p>
+                    <p class="date" id="date65"></p>
+                        <p class="commentary" id="commentary65"></p>
+                        </div>
+                </div>
+                <div class="song" id="song64">
+                    <img class="coverart" id="coverArt64"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#64 <span class="song-title" id="song-title64" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location64"></span> by <span id="project64"></span></p>
+                    <p class="date" id="date64"></p>
+                        <p class="commentary" id="commentary64"></p>
+                        </div>
+                </div>
+                <div class="song" id="song63">
+                    <img class="coverart" id="coverArt63"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#63 <span class="song-title" id="song-title63" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location63"></span> by <span id="project63"></span></p>
+                    <p class="date" id="date63"></p>
+                        <p class="commentary" id="commentary63"></p>
+                        </div>
+                </div>
+                <div class="song" id="song62">
+                    <img class="coverart" id="coverArt62"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#62 <span class="song-title" id="song-title62" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location62"></span> by <span id="project62"></span></p>
+                    <p class="date" id="date62"></p>
+                        <p class="commentary" id="commentary62"></p>
+                        </div>
+                </div>
+                <div class="song" id="song61">
+                    <img class="coverart" id="coverArt61"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#61 <span class="song-title" id="song-title61" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location61"></span> by <span id="project61"></span></p>
+                    <p class="date" id="date61"></p>
+                        <p class="commentary" id="commentary61"></p>
+                        </div>
+                </div>
+                <div class="song" id="song60">
+                    <img class="coverart" id="coverArt60"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#60 <span class="song-title" id="song-title60" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location60"></span> by <span id="project60"></span></p>
+                    <p class="date" id="date60"></p>
+                        <p class="commentary" id="commentary60"></p>
+                        </div>
+                </div>
+                <div class="song" id="song59">
+                    <img class="coverart" id="coverArt59"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#59 <span class="song-title" id="song-title59" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location59"></span> by <span id="project59"></span></p>
+                    <p class="date" id="date59"></p>
+                        <p class="commentary" id="commentary59"></p>
+                        </div>
+                </div>
+                <div class="song" id="song58">
+                    <img class="coverart" id="coverArt58"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#58 <span class="song-title" id="song-title58" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location58"></span> by <span id="project58"></span></p>
+                    <p class="date" id="date58"></p>
+                        <p class="commentary" id="commentary58"></p>
+                        </div>
+                </div>
+                <div class="song" id="song57">
+                    <img class="coverart" id="coverArt57"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#57 <span class="song-title" id="song-title57" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location57"></span> by <span id="project57"></span></p>
+                    <p class="date" id="date57"></p>
+                        <p class="commentary" id="commentary57"></p>
+                        </div>
+                </div>
+                <div class="song" id="song56">
+                    <img class="coverart" id="coverArt56"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#56 <span class="song-title" id="song-title56" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location56"></span> by <span id="project56"></span></p>
+                    <p class="date" id="date56"></p>
+                        <p class="commentary" id="commentary56"></p>
+                        </div>
+                </div>
+                <div class="song" id="song55">
+                    <img class="coverart" id="coverArt55"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#55 <span class="song-title" id="song-title55" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location55"></span> by <span id="project55"></span></p>
+                    <p class="date" id="date55"></p>
+                        <p class="commentary" id="commentary55"></p>
+                        </div>
+                </div>
+                <div class="song" id="song54">
+                    <img class="coverart" id="coverArt54"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#54 <span class="song-title" id="song-title54" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location54"></span> by <span id="project54"></span></p>
+                    <p class="date" id="date54"></p>
+                        <p class="commentary" id="commentary54"></p>
+                        </div>
+                </div>
+                <div class="song" id="song53">
+                    <img class="coverart" id="coverArt53"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#53 <span class="song-title" id="song-title53" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location53"></span> by <span id="project53"></span></p>
+                    <p class="date" id="date53"></p>
+                        <p class="commentary" id="commentary53"></p>
+                        </div>
+                </div>
+                <div class="song" id="song52">
+                    <img class="coverart" id="coverArt52"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#52 <span class="song-title" id="song-title52" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location52"></span> by <span id="project52"></span></p>
+                    <p class="date" id="date52"></p>
+                        <p class="commentary" id="commentary52"></p>
+                        </div>
+                </div>
+                <div class="song" id="song51">
+                    <img class="coverart" id="coverArt51"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#51 <span class="song-title" id="song-title51" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location51"></span> by <span id="project51"></span></p>
+                    <p class="date" id="date51"></p>
+                        <p class="commentary" id="commentary51"></p>
+                        </div>
+                </div>
+                <div class="song" id="song50">
+                    <img class="coverart" id="coverArt50"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#50 <span class="song-title" id="song-title50" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location50"></span> by <span id="project50"></span></p>
+                    <p class="date" id="date50"></p>
+                        <p class="commentary" id="commentary50"></p>
+                        </div>
+                </div>
+                <div class="song" id="song49">
+                    <img class="coverart" id="coverArt49"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#49 <span class="song-title" id="song-title49" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location49"></span> by <span id="project49"></span></p>
+                    <p class="date" id="date49"></p>
+                        <p class="commentary" id="commentary49"></p>
+                        </div>
+                </div>
+                <div class="song" id="song48">
+                    <img class="coverart" id="coverArt48"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#48 <span class="song-title" id="song-title48" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location48"></span> by <span id="project48"></span></p>
+                    <p class="date" id="date48"></p>
+                        <p class="commentary" id="commentary48"></p>
+                        </div>
+                </div>
+                <div class="song" id="song47">
+                    <img class="coverart" id="coverArt47"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#47 <span class="song-title" id="song-title47" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location47"></span> by <span id="project47"></span></p>
+                    <p class="date" id="date47"></p>
+                        <p class="commentary" id="commentary47"></p>
+                        </div>
+                </div>
+                <div class="song" id="song46">
+                    <img class="coverart" id="coverArt46"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#46 <span class="song-title" id="song-title46" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location46"></span> by <span id="project46"></span></p>
+                    <p class="date" id="date46"></p>
+                        <p class="commentary" id="commentary46"></p>
+                        </div>
+                </div>
+                <div class="song" id="song45">
+                    <img class="coverart" id="coverArt45"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#45 <span class="song-title" id="song-title45" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location45"></span> by <span id="project45"></span></p>
+                    <p class="date" id="date45"></p>
+                        <p class="commentary" id="commentary45"></p>
+                        </div>
+                </div>
+                <div class="song" id="song44">
+                    <img class="coverart" id="coverArt44"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#44 <span class="song-title" id="song-title44" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location44"></span> by <span id="project44"></span></p>
+                    <p class="date" id="date44"></p>
+                        <p class="commentary" id="commentary44"></p>
+                        </div>
+                </div>
+                <div class="song" id="song43">
+                    <img class="coverart" id="coverArt43"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#43 <span class="song-title" id="song-title43" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location43"></span> by <span id="project43"></span></p>
+                    <p class="date" id="date43"></p>
+                        <p class="commentary" id="commentary43"></p>
+                        </div>
+                </div>
+                <div class="song" id="song42">
+                    <img class="coverart" id="coverArt42"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#42 <span class="song-title" id="song-title42" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location42"></span> by <span id="project42"></span></p>
+                    <p class="date" id="date42"></p>
+                        <p class="commentary" id="commentary42"></p>
+                        </div>
+                </div>
+                <div class="song" id="song41">
+                    <img class="coverart" id="coverArt41"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#41 <span class="song-title" id="song-title41" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location41"></span> by <span id="project41"></span></p>
+                    <p class="date" id="date41"></p>
+                        <p class="commentary" id="commentary41"></p>
+                        </div>
+                </div>
+                <div class="song" id="song40">
+                    <img class="coverart" id="coverArt40"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#40 <span class="song-title" id="song-title40" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location40"></span> by <span id="project40"></span></p>
+                    <p class="date" id="date40"></p>
+                        <p class="commentary" id="commentary40"></p>
+                        </div>
+                </div>
+                <div class="song" id="song39">
+                    <img class="coverart" id="coverArt39"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#39 <span class="song-title" id="song-title39" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location39"></span> by <span id="project39"></span></p>
+                    <p class="date" id="date39"></p>
+                        <p class="commentary" id="commentary39"></p>
+                        </div>
+                </div>
+                <div class="song" id="song38">
+                    <img class="coverart" id="coverArt38"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#38 <span class="song-title" id="song-title38" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location38"></span> by <span id="project38"></span></p>
+                    <p class="date" id="date38"></p>
+                        <p class="commentary" id="commentary38"></p>
+                        </div>
+                </div>
+                <div class="song" id="song37">
+                    <img class="coverart" id="coverArt37"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#37 <span class="song-title" id="song-title37" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location37"></span> by <span id="project37"></span></p>
+                    <p class="date" id="date37"></p>
+                        <p class="commentary" id="commentary37"></p>
+                        </div>
+                </div>
+                <div class="song" id="song36">
+                    <img class="coverart" id="coverArt36"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#36 <span class="song-title" id="song-title36" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location36"></span> by <span id="project36"></span></p>
+                    <p class="date" id="date36"></p>
+                        <p class="commentary" id="commentary36"></p>
+                        </div>
+                </div>
+                <div class="song" id="song35">
+                    <img class="coverart" id="coverArt35"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#35 <span class="song-title" id="song-title35" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location35"></span> by <span id="project35"></span></p>
+                    <p class="date" id="date35"></p>
+                        <p class="commentary" id="commentary35"></p>
+                        </div>
+                </div>
+                <div class="song" id="song34">
+                    <img class="coverart" id="coverArt34"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#34 <span class="song-title" id="song-title34" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location34"></span> by <span id="project34"></span></p>
+                    <p class="date" id="date34"></p>
+                        <p class="commentary" id="commentary34"></p>
+                        </div>
+                </div>
+                <div class="song" id="song33">
+                    <img class="coverart" id="coverArt33"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#33 <span class="song-title" id="song-title33" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location33"></span> by <span id="project33"></span></p>
+                    <p class="date" id="date33"></p>
+                        <p class="commentary" id="commentary33"></p>
+                        </div>
+                </div>
+                <div class="song" id="song32">
+                    <img class="coverart" id="coverArt32"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#32 <span class="song-title" id="song-title32" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location32"></span> by <span id="project32"></span></p>
+                    <p class="date" id="date32"></p>
+                        <p class="commentary" id="commentary32"></p>
+                        </div>
+                </div>
+                <div class="song" id="song31">
+                    <img class="coverart" id="coverArt31"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#31 <span class="song-title" id="song-title31" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location31"></span> by <span id="project31"></span></p>
+                    <p class="date" id="date31"></p>
+                        <p class="commentary" id="commentary31"></p>
+                        </div>
+                </div>
+                <div class="song" id="song30">
+                    <img class="coverart" id="coverArt30"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#30 <span class="song-title" id="song-title30" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location30"></span> by <span id="project30"></span></p>
+                    <p class="date" id="date30"></p>
+                        <p class="commentary" id="commentary30"></p>
+                        </div>
+                </div>
+                <div class="song" id="song29">
+                    <img class="coverart" id="coverArt29"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#29 <span class="song-title" id="song-title29" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location29"></span> by <span id="project29"></span></p>
+                    <p class="date" id="date29"></p>
+                        <p class="commentary" id="commentary29"></p>
+                        </div>
+                </div>
+                <div class="song" id="song28">
+                    <img class="coverart" id="coverArt28"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#28 <span class="song-title" id="song-title28" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location28"></span> by <span id="project28"></span></p>
+                    <p class="date" id="date28"></p>
+                        <p class="commentary" id="commentary28"></p>
+                        </div>
+                </div>
+                <div class="song" id="song27">
+                    <img class="coverart" id="coverArt27"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#27 <span class="song-title" id="song-title27" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location27"></span> by <span id="project27"></span></p>
+                    <p class="date" id="date27"></p>
+                        <p class="commentary" id="commentary27"></p>
+                        </div>
+                </div>
+                <div class="song" id="song26">
+                    <img class="coverart" id="coverArt26"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#26 <span class="song-title" id="song-title26" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location26"></span> by <span id="project26"></span></p>
+                    <p class="date" id="date26"></p>
+                        <p class="commentary" id="commentary26"></p>
+                        </div>
+                </div>
+                <div class="song" id="song25">
+                    <img class="coverart" id="coverArt25"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#25 <span class="song-title" id="song-title25" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location25"></span> by <span id="project25"></span></p>
+                    <p class="date" id="date25"></p>
+                        <p class="commentary" id="commentary25"></p>
+                        </div>
+                </div>
+                <div class="song" id="song24">
+                    <img class="coverart" id="coverArt24"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#24 <span class="song-title" id="song-title24" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location24"></span> by <span id="project24"></span></p>
+                    <p class="date" id="date24"></p>
+                        <p class="commentary" id="commentary24"></p>
+                        </div>
+                </div>
+                <div class="song" id="song23">
+                    <img class="coverart" id="coverArt23"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#23 <span class="song-title" id="song-title23" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location23"></span> by <span id="project23"></span></p>
+                    <p class="date" id="date23"></p>
+                        <p class="commentary" id="commentary23"></p>
+                        </div>
+                </div>
+                <div class="song" id="song22">
+                    <img class="coverart" id="coverArt22"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#22 <span class="song-title" id="song-title22" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location22"></span> by <span id="project22"></span></p>
+                    <p class="date" id="date22"></p>
+                        <p class="commentary" id="commentary22"></p>
+                        </div>
+                </div>
+                <div class="song" id="song21">
+                    <img class="coverart" id="coverArt21"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#21 <span class="song-title" id="song-title21" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location21"></span> by <span id="project21"></span></p>
+                    <p class="date" id="date21"></p>
+                        <p class="commentary" id="commentary21"></p>
+                        </div>
+                </div>
+                <div class="song" id="song20">
+                    <img class="coverart" id="coverArt20"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#20 <span class="song-title" id="song-title20" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location20"></span> by <span id="project20"></span></p>
+                    <p class="date" id="date20"></p>
+                        <p class="commentary" id="commentary20"></p>
+                        </div>
+                </div>
+                <div class="song" id="song19">
+                    <img class="coverart" id="coverArt19"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#19 <span class="song-title" id="song-title19" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location19"></span> by <span id="project19"></span></p>
+                    <p class="date" id="date19"></p>
+                        <p class="commentary" id="commentary19"></p>
+                        </div>
+                </div>
+                <div class="song" id="song18">
+                    <img class="coverart" id="coverArt18"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#18 <span class="song-title" id="song-title18" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location18"></span> by <span id="project18"></span></p>
+                    <p class="date" id="date18"></p>
+                        <p class="commentary" id="commentary18"></p>
+                        </div>
+                </div>
+                <div class="song" id="song17">
+                    <img class="coverart" id="coverArt17"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#17 <span class="song-title" id="song-title17" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location17"></span> by <span id="project17"></span></p>
+                    <p class="date" id="date17"></p>
+                        <p class="commentary" id="commentary17"></p>
+                        </div>
+                </div>
+                <div class="song" id="song16">
+                    <img class="coverart" id="coverArt16"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#16 <span class="song-title" id="song-title16" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location16"></span> by <span id="project16"></span></p>
+                    <p class="date" id="date16"></p>
+                        <p class="commentary" id="commentary16"></p>
+                        </div>
+                </div>
+                <div class="song" id="song15">
+                    <img class="coverart" id="coverArt15"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#15 <span class="song-title" id="song-title15" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location15"></span> by <span id="project15"></span></p>
+                    <p class="date" id="date15"></p>
+                        <p class="commentary" id="commentary15"></p>
+                        </div>
+                </div>
+                <div class="song" id="song14">
+                    <img class="coverart" id="coverArt14"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#14 <span class="song-title" id="song-title14" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location14"></span> by <span id="project14"></span></p>
+                    <p class="date" id="date14"></p>
+                        <p class="commentary" id="commentary14"></p>
+                        </div>
+                </div>
+                <div class="song" id="song13">
+                    <img class="coverart" id="coverArt13"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#13 <span class="song-title" id="song-title13" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location13"></span> by <span id="project13"></span></p>
+                    <p class="date" id="date13"></p>
+                        <p class="commentary" id="commentary13"></p>
+                        </div>
+                </div>
+                <div class="song" id="song12">
+                    <img class="coverart" id="coverArt12"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#12 <span class="song-title" id="song-title12" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location12"></span> by <span id="project12"></span></p>
+                    <p class="date" id="date12"></p>
+                        <p class="commentary" id="commentary12"></p>
+                        </div>
+                </div>
+                <div class="song" id="song11">
+                    <img class="coverart" id="coverArt11"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#11 <span class="song-title" id="song-title11" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location11"></span> by <span id="project11"></span></p>
+                    <p class="date" id="date11"></p>
+                        <p class="commentary" id="commentary11"></p>
+                        </div>
+                </div>
+                <div class="song" id="song10">
+                    <img class="coverart" id="coverArt10"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#10 <span class="song-title" id="song-title10" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location10"></span> by <span id="project10"></span></p>
+                    <p class="date" id="date10"></p>
+                        <p class="commentary" id="commentary10"></p>
+                        </div>
+                </div>
+                <div class="song" id="song9">
+                    <img class="coverart" id="coverArt9"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#9 <span class="song-title" id="song-title9" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location9"></span> by <span id="project9"></span></p>
+                    <p class="date" id="date9"></p>
+                        <p class="commentary" id="commentary9"></p>
+                        </div>
+                </div>
+                <div class="song" id="song8">
+                    <img class="coverart" id="coverArt8"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#8 <span class="song-title" id="song-title8" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location8"></span> by <span id="project8"></span></p>
+                    <p class="date" id="date8"></p>
+                        <p class="commentary" id="commentary8"></p>
+                        </div>
+                </div>
+                <div class="song" id="song7">
+                    <img class="coverart" id="coverArt7"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#7 <span class="song-title" id="song-title7" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location7"></span> by <span id="project7"></span></p>
+                    <p class="date" id="date7"></p>
+                        <p class="commentary" id="commentary7"></p>
+                        </div>
+                </div>
+                <div class="song" id="song6">
+                    <img class="coverart" id="coverArt6"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#6 <span class="song-title" id="song-title6" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location6"></span> by <span id="project6"></span></p>
+                    <p class="date" id="date6"></p>
+                        <p class="commentary" id="commentary6"></p>
+                        </div>
+                </div>
+                <div class="song" id="song5">
+                    <img class="coverart" id="coverArt5"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#5 <span class="song-title" id="song-title5" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location5"></span> by <span id="project5"></span></p>
+                    <p class="date" id="date5"></p>
+                        <p class="commentary" id="commentary5"></p>
+                        </div>
+                </div>
+                <div class="song" id="song4">
+                    <img class="coverart" id="coverArt4"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#4 <span class="song-title" id="song-title4" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location4"></span> by <span id="project4"></span></p>
+                    <p class="date" id="date4"></p>
+                        <p class="commentary" id="commentary4"></p>
+                        </div>
+                </div>
+                <div class="song" id="song3">
+                    <img class="coverart" id="coverArt3"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#3 <span class="song-title" id="song-title3" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location3"></span> by <span id="project3"></span></p>
+                    <p class="date" id="date3"></p>
+                        <p class="commentary" id="commentary3"></p>
+                        </div>
+                </div>
+                <div class="song" id="song2">
+                    <img class="coverart" id="coverArt2"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#2 <span class="song-title" id="song-title2" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location2"></span> by <span id="project2"></span></p>
+                    <p class="date" id="date2"></p>
+                        <p class="commentary" id="commentary2"></p>
+                        </div>
+                </div>
+                <div class="song" id="song1">
+                    <img class="coverart" id="coverArt1"/>
+                    <div class="song-info">
+                    <h1 class="number-name">#1 <span class="song-title" id="song-title1" style="font-size: 66px"></span></h1>
+                    <p class="location">On <span style="font-style: italic;" id="location1"></span> by <span id="project1"></span></p>
+                    <p class="date" id="date1"></p>
+                        <p class="commentary" id="commentary1"></p>
+                        </div>
+                </div>
+
             </div>
             <button class="move-left" onclick="moveSliderLeft()"><</button>
             <button class="move-right" onclick="moveSliderRight()">></button> 

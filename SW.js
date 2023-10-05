@@ -1,31 +1,7 @@
 let counter = 0;
 let currentPosition = 0;
-let counter2 = 1;
+let counter2 = 100;
 const numberName = document.querySelector(".number-name");
-
-function slideButton() {
-    counter++;
-    const button = document.querySelector(".sliding-photo-button");
-    const background = document.querySelector(".background");
-    const introduction = document.querySelector(".explanation-text");
-    const darkModeSwitch = document.querySelector(".dark-mode-switch");
-    const header = document.querySelector("home-header");
-    if(counter % 2 == 1)
-    {
-        button.style.transform = "translateX(300px)";
-        background.style.backgroundColor = "rgb(53, 53, 53)";
-        introduction.style.color = "orange";
-        darkModeSwitch.style.backgroundColor = "rgb(255, 161, 72)";
-        header.style.backgroundColor = "blue";
-    }
-    else 
-    {
-        button.style.transform = "translateX(0px)";
-        background.style.backgroundColor = "aliceblue";
-        introduction.style.color = "rgb(108, 108, 108)";
-        darkModeSwitch.style.backgroundColor = "lightgrey";
-    }
-}  
 
 function linkEssentialAlbums() {
     window.location.href = "essentialAlbums.html";
@@ -46,40 +22,40 @@ function moveSliderRight() {
         currentPosition-=100;
         sliderContainer.style.transform = `translateX(${currentPosition}vw)`;
     }
-    
 }
 
 function moveSliderLeft() {
     const sliderContainer = document.querySelector(".slider-container");
-    console.log(currentPosition)
-    if(currentPosition < 0)
+    if(currentPosition != 0)
     {
         currentPosition+=100;
         sliderContainer.style.transform = `translateX(${currentPosition}vw)`;
     }
 }
 
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRUSMvEQ88V3TJ-Czntq-02RwryeStduQjtpJ3lDGOL7sii1G0U8o_JNqYrwlTdWp0ecD6wj0gICFvu/pub?gid=881276312&single=true&output=csv')
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTwNfrFm8_9-JnMkjisj3W7_gvMwYzq3Vt26I-pULut5TxEZaQv0z21SzfwuNjBkhM_Fr4W5D4ioy1w/pub?gid=881276312&single=true&output=csv')
   .then(response => response.text())
   .then(data => {
     Papa.parse(data, {
-      header: true, 
-      dynamicTyping: true, 
+      header: true, // Use the first row as headers
+      dynamicTyping: true, // Automatically convert numeric values
       complete: function (results) {
         results.data.forEach(row => {
-            console.log(row);
+            //console.log(row);
         }
         )
 
         results.data.forEach(row => {
             let counterString = counter2.toString();
             document.querySelector("#coverArt" + counterString).src = row['Cover'];
-            document.querySelector("#location" + counterString).textContent = row['Artist'];
+            document.querySelector("#location" + counterString).textContent = row['Album'];
             document.querySelector("#date" + counterString).textContent = row['Date'];
             document.querySelector("#commentary" + counterString).textContent = row['Commentary'];
+            document.querySelector("#project" + counterString).textContent = row['Project'];
+            document.querySelector("#song" + counterString).id = row['Album-ID'];
             console.log(row);
 
-            let fontSize = 66;
+            let fontSize;
             //let songTitle = document.querySelector("#song-title" + counterString);
             if(row['Title'].length > 20)
             {
@@ -92,7 +68,7 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRUSMvEQ88V3TJ-Czntq-02Rw
             }
             document.querySelector("#song-title" + counterString).textContent = row['Title'];
             document.querySelector("#song-title" + counterString).style.fontSize = fontSize + "px";
-            counter2++;
+            counter2--;
         });
 
         //let specificRow = results.data[1];

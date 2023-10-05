@@ -97,7 +97,7 @@ header #essential-albums {
     border-radius: 50%;
     margin-left: 25px;
     margin-bottom: -4px;
-    background: url("https://cdnsm5-ss19.sharpschool.com/UserFiles/Servers/Server_1301440/Image/News/What's%20new/2020%20-%20December/Grimes_web.jpg") no-repeat center center;
+    background: url("https://raw.githubusercontent.com/SuperWinterMopper/SuperWinterMopper.github.io/main/squared%20image.JPG") no-repeat center center;
     background-size: cover;
     cursor: pointer;
     transition: transform .2s, box-shadow .2s;
@@ -122,4 +122,14 @@ header #essential-albums {
 .introduction .explanation-text {
     line-height: 1.8;
     color: rgb(108, 108, 108);
+}
+
+footer {
+    background-color: rgb(58, 58, 58);
+    letter-spacing: .2em;
+    color: rgb(172, 172, 172);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 8vh;
+    margin-top: 35vh;
 }

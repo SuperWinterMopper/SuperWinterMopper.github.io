@@ -131,7 +131,8 @@ header #essential-albums {
 }
 
 .song .song-info .song-title {
-    padding-left: 6vw;
+    padding-left: 2vw;
+    font-size: 66px;
 }
 
 .song .number-name {
@@ -210,7 +211,6 @@ header #essential-albums {
     opacity: 1;
     background-color: rgba(214, 214, 214, 0.271);
 }
-
 
 .move-left {
     top: 0;
