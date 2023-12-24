@@ -197,13 +197,29 @@ header #essential-albums {
 .song-info {
     padding-left: 3vw;
     padding-right: 3vw;
-    background-color: orange;
 }
+
+@media only screen and (max-width: 600px) {
+    .song-info {
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;   
+    }
+}  
 
 .song .song-info .song-title {
     padding-left: 2vw;
     font-size: 66px;
 }
+
+@media only screen and (max-width: 600px) {
+    .song .song-info .song-title {
+        padding: 0;
+        font-size: .01em;
+    }
+}  
 
 .song .number-name {
     margin-top: 80px;
@@ -212,6 +228,15 @@ header #essential-albums {
     margin-bottom: 4vh;
     padding-top: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .song .number-name {
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}  
 
 .song a {
     position: relative;
