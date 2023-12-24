@@ -86,11 +86,11 @@ function loadSongs() {
                     document.querySelector("#commentary" + counterString).textContent = row['Commentary'];
                     
                     if(window.innerWidth <= 600) {
-                        let fontSize = 1;
+                        let fontSize = 33;
                         console.log("the window is less than 600 has been called");
                         if(row['Title'].length > 20)
                         {
-                            //fontSize = 584 / row['Title'].replace(/\s/g, '').length; this is the right one
+                            fontSize = 584 / row['Title'].replace(/\s/g, '').length; 
                         }
                         document.querySelector("#song-title" + counterString).textContent = row['Title'];
                         document.querySelector("#song-title" + counterString).style.fontSize = fontSize + "px";
