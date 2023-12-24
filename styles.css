@@ -19,10 +19,16 @@ header {
     height: 8vh;
 }
 
+@media only screen and (max-width: 600px) {
+    .header-edge {
+        width: 2vw;
+    }
+}  
+
 header button {
     background-color: rgb(58, 58, 58);
     padding: calc(.5vh) calc(2vh) calc(.5vh) calc(2vh);
-    font-size: larger;
+    font-size: 1.2em;
     transition: .3s;
     border: none;
     overflow: hidden; /* Hide the overflow of pseudo-element */
@@ -31,6 +37,12 @@ header button {
     letter-spacing: .2em;
     color: rgb(172, 172, 172);
 }
+
+@media only screen and (max-width: 600px) {
+    header button {
+        font-size: .6em;
+    }
+}  
 
 header button::before {
     content: "";
@@ -89,7 +101,13 @@ header #essential-albums {
     align-items: center;
 }
 
-
+@media only screen and (max-width: 600px) {
+    .dark-mode-switch {
+        border-radius: 250px;
+        width: 300px;
+        height: 150px;  
+    }
+}  
 
 .dark-mode-switch .sliding-photo-button {
     width: 250px;
@@ -103,6 +121,15 @@ header #essential-albums {
     transition: transform .2s, box-shadow .2s;
     border: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .dark-mode-switch .sliding-photo-button {
+        width: 125px;
+        height: 125px;
+        margin-left: 12px;
+        margin-bottom: -2px;
+        }
+}  
 
 .sliding-photo-button:hover {
     box-shadow: 0px 0px 10px rgb(232, 172, 119);
@@ -123,6 +150,12 @@ header #essential-albums {
     line-height: 1.8;
     color: rgb(108, 108, 108);
 }
+
+@media only screen and (max-width: 600px) {
+    .introduction .explanation-text {
+        font-size: 1em;
+    }
+}  
 
 footer {
     background-color: rgb(58, 58, 58);
