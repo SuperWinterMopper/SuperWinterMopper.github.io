@@ -232,9 +232,10 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song .number-name {
         position: absolute;
-        top: 16%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 1.5em;
     }
 }  
 
