@@ -217,7 +217,7 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song .song-info .song-title {
         padding: 0;
-        font-size: .01em;
+        font-size: 1em;
     }
 }  
 
