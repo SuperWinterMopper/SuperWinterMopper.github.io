@@ -3,10 +3,6 @@ let currentPosition = 0;
 let counter2 = 1;
 const numberName = document.querySelector(".number-name");
 
-document.addEventListener('DOMContentLoaded', function() {
-    slideButton();
-});
-
 function slideButton() {    
     counter++;
     const button = document.querySelector(".sliding-photo-button");
@@ -17,12 +13,11 @@ function slideButton() {
     {
         console.log("The inner width is " + window.innerWidth);
         if(window.innerWidth <= 600) {
-            button.style.transform = "translateX(20px)";
+            button.style.transform = "translateX(150px)";
         }
         else {
             button.style.transform = "translateX(300px)";
         }
-        button.style.transform = "translateX(300px)";
         background.style.backgroundColor = "rgb(53, 53, 53)";
         introduction.style.color = "orange";
         darkModeSwitch.style.backgroundColor = "rgb(255, 161, 72)";
