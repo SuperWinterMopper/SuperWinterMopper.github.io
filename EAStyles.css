@@ -93,7 +93,7 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .main-screen {
-        height: 100vh;
+        height: 820px;
     }
 }  
 
@@ -200,8 +200,8 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song img{
-        width: 300px;
-        height: 300px;
+        width: 330px;
+        height: 330px;
         position: absolute;
         top: 80px;
         left: 50%;
@@ -222,7 +222,7 @@ header #essential-albums {
         left: 50%;
         transform: translateX(-50%);
         padding: 0;   
-        width: 300px;
+        width: 330px;
     }
 }  
 
@@ -235,6 +235,7 @@ header #essential-albums {
     .song .song-info .song-title {
         padding: 0;
         font-size: 33px;
+        margin-bottom: -10px;
     }
 }  
 
