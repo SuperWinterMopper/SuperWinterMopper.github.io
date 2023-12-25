@@ -30,7 +30,6 @@ function slideButton() {
     } 
 }
 
-
 function linkEssentialAlbums() {
     window.location.href = "essentialAlbums.html";
 }
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       touchStartY = e.touches[0].clientY;
     });
 
-    sliderContainer.addEventListener('touchmove', function(e) {
+    /*sliderContainer.addEventListener('touchmove', function(e) {
         let touchEndX = e.touches[0].clientX;
         let touchEndY = e.touches[0].clientY;
 
@@ -69,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         touchStartX = touchEndX;
         touchStartY = touchEndY;
-    });    
+    });  */  
 
 
     sliderContainer.addEventListener('touchend', function(e) {
