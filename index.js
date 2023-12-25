@@ -43,6 +43,7 @@ function linkHome() {
     window.location.href = "index.html";
 }
 
+/*
 document.addEventListener('DOMContentLoaded', function() {
     loadSongs();
     let touchStartX;
@@ -58,10 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
     sliderContainer.addEventListener('touchmove', function(e) {
         let touchEndX = e.touches[0].clientX;
         let touchEndY = e.touches[0].clientY;
-    
         let deltaX = touchEndX - touchStartX;
         let deltaY = touchEndY - touchStartY;
-    
         // Check if the swipe is predominantly vertical
         if (Math.abs(deltaY) > Math.abs(deltaX)) {
           e.preventDefault(); // Prevent default vertical scrolling
@@ -93,7 +92,68 @@ document.addEventListener('DOMContentLoaded', function() {
         moveSliderRight();
       }
     }
+  });*/
+
+  document.addEventListener('DOMContentLoaded', function() {
+    loadSongs();
+    let touchStartX;
+    let touchStartY;    
+    let sliderContainer = document.querySelector('.slider-container');
+    let verticalSwipeThreshold = 15; // Adjust as needed
+
+    let hammer = new Hammer(sliderContainer);
+
+    hammer.on('panstart', function(e) {
+        touchStartX = e.center.x;
+        touchStartY = e.center.y;
+        });
+
+        hammer.on('panmove', function(e) {
+            var touchEndX = e.center.x;
+            var touchEndY = e.center.y;
+        
+            var deltaX = touchEndX - touchStartX;
+            var deltaY = touchEndY - touchStartY;
+        
+            // Check if the swipe is predominantly vertical
+            if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > verticalSwipeThreshold) {
+              e.preventDefault(); // Prevent default vertical scrolling
+            }
+        
+            // Additional logic for vertical swiping if needed
+        
+            // Update touchStart values for the next iteration
+            touchStartX = touchEndX;
+            touchStartY = touchEndY;
+        });
+            
+  
+        hammer.on('panend', function(e) {
+            var touchEndX = e.center.x;
+            var touchEndY = e.center.y;
+        
+            var deltaX = touchEndX - touchStartX;
+            var deltaY = touchEndY - touchStartY;
+        
+            // Check if the swipe is predominantly horizontal
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+              handleSwipe(touchStartX, touchEndX);
+            }
+          });
+          
+    function handleSwipe(startX, endX) {
+      let swipeThreshold = 25; // Adjust as needed
+  
+      if (endX > startX + swipeThreshold) {
+        // Swipe to the right
+        moveSliderLeft();
+      } else if (endX < startX - swipeThreshold) {
+        // Swipe to the left
+        moveSliderRight();
+      }
+    }
   });
+
 
   function moveSliderRight() {
     const sliderContainer = document.querySelector(".slider-container");
