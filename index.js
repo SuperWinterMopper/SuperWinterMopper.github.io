@@ -59,21 +59,22 @@ document.addEventListener('DOMContentLoaded', function() {
     sliderContainer.addEventListener('touchmove', function(e) {
         let touchEndX = e.touches[0].clientX;
         let touchEndY = e.touches[0].clientY;
+
         let deltaX = touchEndX - touchStartX;
         let deltaY = touchEndY - touchStartY;
+
         // Check if the swipe is predominantly vertical
-        /*if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        if (Math.abs(deltaY) > Math.abs(deltaX)) {
           e.preventDefault(); // Prevent default vertical scrolling
-        }*/
+        }
         touchStartX = touchEndX;
         touchStartY = touchEndY;
     });    
-    
-  
+
+
     sliderContainer.addEventListener('touchend', function(e) {
       let touchEndX = e.changedTouches[0].clientX;
       let touchEndY = e.changedTouches[0].clientY;
-
       let deltaX = touchEndX - touchStartX;
       let deltaY = touchEndY - touchStartY;
       if (Math.abs(deltaX) > (5 * Math.abs(deltaY))) {
