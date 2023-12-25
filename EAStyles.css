@@ -166,6 +166,7 @@ header #essential-albums {
     display: flex;
     position: relative;
     transition: transform .5s ease-in-out;
+    overflow-x: hidden;
 }
 
 .song {
@@ -313,6 +314,7 @@ header #essential-albums {
     width: 100vw;
     height: 800px;
     position: relative;
+    overflow-x: hidden;
 }
 
 .move-left, .move-right {
