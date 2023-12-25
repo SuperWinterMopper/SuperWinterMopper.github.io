@@ -224,7 +224,7 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song-info {
         position: absolute;
-        top: 400px;
+        top: 450px;
         left: 50%;
         transform: translateX(-50%);
         padding: 0;   
@@ -258,6 +258,7 @@ header #essential-albums {
     .song .number-name {
         font-size: 40px;
         margin-top: -15px;
+        margin-bottom: 34px;
     }
 }  
 
@@ -277,7 +278,7 @@ header #essential-albums {
     .song .location {
         font-size: 22px;
         margin-top: 0;
-        margin-bottom: .4vh;
+        margin-bottom: 4px;
     }
 }  
 
@@ -318,7 +319,7 @@ header #essential-albums {
     border: none;
     font-size: 3em;
     cursor: pointer;
-    transition: opacity .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
     opacity: .3;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -326,12 +327,25 @@ header #essential-albums {
     position: absolute;
 }
 
+.move-left.clicked, .move-right.clicked {
+    opacity: 0;
+    animation: fadeOut .3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .move-left, .move-right {
         height: 800px;
+        color: black;
+        opacity: 0;
     }
 }  
-
 
 .move-left:hover, .move-right:hover {
     opacity: 1;

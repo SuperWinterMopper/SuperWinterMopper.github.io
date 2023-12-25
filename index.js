@@ -45,6 +45,7 @@ function linkHome() {
 
 function moveSliderRight() {
     const sliderContainer = document.querySelector(".slider-container");
+    sliderContainer.classList.add('clicked');
     if(currentPosition > -9900)
     {
         currentPosition-=100;
@@ -55,6 +56,7 @@ function moveSliderRight() {
 
 function moveSliderLeft() {
     const sliderContainer = document.querySelector(".slider-container");
+    sliderContainer.classList.add('clicked');
     if(currentPosition < 0)
     {
         currentPosition+=100;
