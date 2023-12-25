@@ -191,6 +191,7 @@ header #essential-albums {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden; 
+        position: relative;
     }
 }  
 
@@ -200,10 +201,9 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song .entry-number-mobile{
-        display:flex;
-        text-align: left;
+        display: flex;
         font-size: 40px;
-        padding-top: 20px;
+        margin: 0;
     }
 }  
 
