@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let deltaX = touchEndX - touchStartX;
         let deltaY = touchEndY - touchStartY;
         // Check if the swipe is predominantly vertical
-        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        /*if (Math.abs(deltaY) > Math.abs(deltaX)) {
           e.preventDefault(); // Prevent default vertical scrolling
-        }
+        }*/
         touchStartX = touchEndX;
         touchStartY = touchEndY;
     });    
@@ -134,7 +134,6 @@ function loadSongs() {
                     
                     if(window.innerWidth <= 600) {
                         let fontSize = 33;
-                        console.log("the window is less than 600 has been called");
                         if(row['Title'].length > 20)
                         {
                             fontSize = 584 / row['Title'].replace(/\s/g, '').length; 
@@ -144,7 +143,6 @@ function loadSongs() {
                         counter2++;
                     }
                     else {
-                        console.log("Mate the window MORE THAN 600");
                         let fontSize = 66;
                         if(row['Title'].length > 20)
                         {
