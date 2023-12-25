@@ -204,6 +204,7 @@ header #essential-albums {
         display: flex;
         font-size: 40px;
         margin: 0;
+        padding-top: 10px;
     }
 }  
 

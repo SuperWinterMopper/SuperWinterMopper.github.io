@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let deltaX = touchEndX - touchStartX;
       let deltaY = touchEndY - touchStartY;
-      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (Math.abs(deltaX) > (5 * Math.abs(deltaY))) {
         handleSwipe(touchStartX, touchEndX);
       }
       });
