@@ -217,7 +217,7 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song-info {
         position: absolute;
-        top: 45%;
+        top: 400px;
         left: 50%;
         transform: translateX(-50%);
         padding: 0;   
@@ -266,12 +266,11 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song .location {
-        font-size: 16px;
+        font-size: 22px;
         margin-top: 0;
         margin-bottom: .4vh;
     }
 }  
-
 
 .song .date {
     font-size: 2em;
@@ -280,7 +279,7 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song .date {
-        font-size: 16px;
+        font-size: 22px;
     }
 }  
 
@@ -291,7 +290,7 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song .commentary {
-        font-size: 14px;
+        font-size: 18px;
         margin: 0;
     }
 }  
