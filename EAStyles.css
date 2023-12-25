@@ -182,6 +182,7 @@ header #essential-albums {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden; 
     }
 }  
 
@@ -327,23 +328,9 @@ header #essential-albums {
     position: absolute;
 }
 
-.move-left.clicked, .move-right.clicked {
-    opacity: 0;
-    animation: fadeOut .3s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-    }
-}
-
 @media only screen and (max-width: 600px) {
     .move-left, .move-right {
-        height: 800px;
-        color: black;
-        opacity: 0;
+        display: none;
     }
 }  
 

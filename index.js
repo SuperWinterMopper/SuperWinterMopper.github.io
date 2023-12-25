@@ -45,7 +45,6 @@ function linkHome() {
 
 function moveSliderRight() {
     const sliderContainer = document.querySelector(".slider-container");
-    sliderContainer.classList.add('clicked');
     if(currentPosition > -9900)
     {
         currentPosition-=100;
@@ -56,7 +55,6 @@ function moveSliderRight() {
 
 function moveSliderLeft() {
     const sliderContainer = document.querySelector(".slider-container");
-    sliderContainer.classList.add('clicked');
     if(currentPosition < 0)
     {
         currentPosition+=100;
@@ -66,6 +64,28 @@ function moveSliderLeft() {
 
 document.addEventListener('DOMContentLoaded', function() {
     loadSongs();
+    let touchStartX;
+
+    document.getElementsByClassName('song').addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+    });
+  
+    document.getElementsByClassName('song').addEventListener('touchend', function(e) {
+      let touchEndX = e.changedTouches[0].clientX;
+      handleSwipe(touchStartX, touchEndX);
+    });
+  
+    function handleSwipe(startX, endX) {
+      let swipeThreshold = 50; // Adjust as needed
+  
+      if (endX > startX + swipeThreshold) {
+        // Swipe to the right
+        moveSliderRight();
+      } else if (endX < startX - swipeThreshold) {
+        // Swipe to the left
+        moveSliderLeft();
+      }
+    }
   });
 
 function loadSongs() {
