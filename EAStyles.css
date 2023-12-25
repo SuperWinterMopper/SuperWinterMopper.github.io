@@ -172,6 +172,7 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song {
+        height: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -249,6 +250,7 @@ header #essential-albums {
     .song .number-name {
         font-size: 40px;
         margin-top: -15px;
+        margin: 20px;
     }
 }  
 
@@ -290,8 +292,9 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song .commentary {
-        font-size: 18px;
+        font-size: 14px;
         margin: 0;
+        width: 250px;
     }
 }  
 
