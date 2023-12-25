@@ -162,12 +162,18 @@ header #essential-albums {
 
 .slider-container {
     width: 10000vw;
-    height: 800px;
+    height: 100vh;
     display: flex;
     position: relative;
     transition: transform .5s ease-in-out;
     overflow-x: hidden;
 }
+
+@media only screen and (max-width: 600px) {
+    .slider-container {
+        height: 800px;
+        }
+}  
 
 .song {
     width: 100vw;
@@ -180,6 +186,7 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song {
         height: 800px;
+        max-height: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -196,7 +203,7 @@ header #essential-albums {
         display:flex;
         text-align: left;
         font-size: 40px;
-        margin-top: 20px;
+        padding-top: 20px;
     }
 }  
 
@@ -245,7 +252,6 @@ header #essential-albums {
         font-size: 33px;
         margin-bottom: -10px;
         padding-left: 0vw;
-        font-weight: bold;
     }
 }  
 
@@ -313,10 +319,19 @@ header #essential-albums {
 
 .slider-parent {
     width: 100vw;
-    height: 800px;
+    height: 100vh;
     position: relative;
     overflow-x: hidden;
 }
+
+@media only screen and (max-width: 600px) {
+    .slider-parent {
+        width: 100vw;
+        height: 800px;
+        position: relative;
+        overflow-x: hidden;
+    }
+}  
 
 .move-left, .move-right {
     background-color: transparent;
