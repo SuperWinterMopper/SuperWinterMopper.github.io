@@ -43,7 +43,34 @@ function linkHome() {
     window.location.href = "index.html";
 }
 
-function moveSliderRight() {
+document.addEventListener('DOMContentLoaded', function() {
+    loadSongs();
+    let touchStartX;
+    let sliderContainer = document.querySelector('.slider-container');
+
+    sliderContainer.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+    });
+  
+    sliderContainer.addEventListener('touchend', function(e) {
+      let touchEndX = e.changedTouches[0].clientX;
+      handleSwipe(touchStartX, touchEndX);
+    });
+  
+    function handleSwipe(startX, endX) {
+      let swipeThreshold = 50; // Adjust as needed
+  
+      if (endX > startX + swipeThreshold) {
+        // Swipe to the right
+        moveSliderRight();
+      } else if (endX < startX - swipeThreshold) {
+        // Swipe to the left
+        moveSliderLeft();
+      }
+    }
+  });
+
+  function moveSliderRight() {
     const sliderContainer = document.querySelector(".slider-container");
     if(currentPosition > -9900)
     {
@@ -62,31 +89,6 @@ function moveSliderLeft() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    loadSongs();
-    let touchStartX;
-
-    document.getElementsByClassName('song').addEventListener('touchstart', function(e) {
-      touchStartX = e.touches[0].clientX;
-    });
-  
-    document.getElementsByClassName('song').addEventListener('touchend', function(e) {
-      let touchEndX = e.changedTouches[0].clientX;
-      handleSwipe(touchStartX, touchEndX);
-    });
-  
-    function handleSwipe(startX, endX) {
-      let swipeThreshold = 50; // Adjust as needed
-  
-      if (endX > startX + swipeThreshold) {
-        // Swipe to the right
-        moveSliderRight();
-      } else if (endX < startX - swipeThreshold) {
-        // Swipe to the left
-        moveSliderLeft();
-      }
-    }
-  });
 
 function loadSongs() {
     fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRUSMvEQ88V3TJ-Czntq-02RwryeStduQjtpJ3lDGOL7sii1G0U8o_JNqYrwlTdWp0ecD6wj0gICFvu/pub?gid=881276312&single=true&output=csv')
