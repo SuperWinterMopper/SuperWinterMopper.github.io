@@ -43,7 +43,7 @@ function linkHome() {
     window.location.href = "index.html";
 }
 
-/*
+
 document.addEventListener('DOMContentLoaded', function() {
     loadSongs();
     let touchStartX;
@@ -92,54 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
         moveSliderRight();
       }
     }
-  });*/
+  });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var sliderContainer = document.querySelector('.slider-container');
-    var verticalSwipeThreshold = 10; // Adjust as needed
-  
-    var hammer = new Hammer(sliderContainer);
-  
-    hammer.on('panstart panmove panend', function(e) {
-      e.preventDefault(); // Prevent default touch actions
-  
-      var touchEndX = e.center.x;
-      var touchEndY = e.center.y;
-  
-      if (e.type === 'panstart') {
-        handlePanStart(touchEndX, touchEndY);
-      } else if (e.type === 'panmove') {
-        handlePanMove(touchEndX, touchEndY);
-      } else if (e.type === 'panend') {
-        handlePanEnd(touchEndX, touchEndY);
-      }
-    });
-  
-    function handlePanStart(x, y) {
-      // Add any logic needed for the start of the pan
-    }
-  
-    function handlePanMove(x, y) {
-      // Add any logic needed for the ongoing pan
-    }
-  
-    function handlePanEnd(x, y) {
-      var swipeThreshold = 25; // Adjust as needed
-  
-      var deltaX = x - e.center.x;
-      var deltaY = y - e.center.y;
-  
-      // Check if the swipe is predominantly horizontal
-      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
-        if (deltaX > 0) {
-          // Swipe to the right
-          moveSliderLeft();
-        } else {
-          // Swipe to the left
-          moveSliderRight();
-        }
-      }
-    }  
 
   function moveSliderRight() {
     const sliderContainer = document.querySelector(".slider-container");
@@ -158,7 +112,6 @@ function moveSliderLeft() {
         sliderContainer.style.transform = `translateX(${currentPosition}vw)`;
     }
 }
-});
 
 function loadSongs() {
     fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRUSMvEQ88V3TJ-Czntq-02RwryeStduQjtpJ3lDGOL7sii1G0U8o_JNqYrwlTdWp0ecD6wj0gICFvu/pub?gid=881276312&single=true&output=csv')
