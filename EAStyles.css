@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    position: relative;
+}
+
 header {
     height: calc(8vh);    
     background-color: rgb(58, 58, 58);
@@ -233,9 +237,10 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .song .song-info .song-title {
-        padding: 0;
+        padding: 0vw;
         font-size: 33px;
         margin-bottom: -10px;
+        padding-left: 0vw;
     }
 }  
 
@@ -251,7 +256,6 @@ header #essential-albums {
     .song .number-name {
         font-size: 40px;
         margin-top: -15px;
-        margin: 20px;
     }
 }  
 
@@ -294,8 +298,10 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song .commentary {
         font-size: 14px;
-        margin: 0;
-        width: 250px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 330;
+        margin: 0px;
     }
 }  
 
@@ -342,6 +348,16 @@ footer {
     text-align: center;
     padding: 8vh;
 }
+
+@media only screen and (max-width: 600px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        margin: 0px;
+        padding: 8vh;    
+        width: 100%;
+    }
+}  
 
 #Default {
     background: rgb(144,144,144);
