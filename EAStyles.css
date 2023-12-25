@@ -178,6 +178,19 @@ header #essential-albums {
     }
 }  
 
+.song .entry-number-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .song .entry-number-mobile{
+        display:flex;
+        text-align: left;
+        font-size: 40px;
+        margin-top: 20px;
+    }
+}  
+
 .song img{
     width: 400px;
     height: 400px;
@@ -189,7 +202,7 @@ header #essential-albums {
         width: 300px;
         height: 300px;
         position: absolute;
-        top: 2%;
+        top: 80px;
         left: 50%;
         transform: translateX(-50%);   
         margin: 0;  
@@ -204,12 +217,11 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .song-info {
         position: absolute;
-        top: 40%;
+        top: 45%;
         left: 50%;
         transform: translateX(-50%);
         padding: 0;   
         width: 300px;
-        background-color: orange;
     }
 }  
 
@@ -239,6 +251,12 @@ header #essential-albums {
         margin-top: -15px;
     }
 }  
+
+@media only screen and (max-width: 600px) {
+    .song .number-name .entry-number-desktop{
+        display: none;
+    }
+} 
 
 .song .location {
     font-size: 32px;
