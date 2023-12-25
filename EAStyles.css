@@ -6,10 +6,11 @@ body {
 
 main {
     position: relative;
+    width: 100vw;
 }
 
 header {
-    height: calc(8vh);    
+    height: 68px;    
     background-color: rgb(58, 58, 58);
     display: flex;
     justify-content: space-between;    
@@ -18,7 +19,7 @@ header {
 .header-edge {
     background-color: rgb(58, 58, 58);
     width: 5vw;
-    height: 8vh;
+    height: 68px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -78,7 +79,7 @@ header #essential-albums {
 
 .seperator-bold {
     background-color: #b8b8b832; /* Color of the rectangle */
-    height: calc(.5vh);
+    height: 4px;
 }
 
 .main-screen {
@@ -155,12 +156,13 @@ header #essential-albums {
         font-size: 1em;
         max-width: 80vw;
         padding-top: 0;
+        height: 254px;
     }
 }  
 
 .slider-container {
     width: 10000vw;
-    height: 100vh;
+    height: 800px;
     display: flex;
     position: relative;
     transition: transform .5s ease-in-out;
@@ -307,7 +309,7 @@ header #essential-albums {
 
 .slider-parent {
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     position: relative;
 }
 
@@ -323,6 +325,13 @@ header #essential-albums {
     height: 100%;
     position: absolute;
 }
+
+@media only screen and (max-width: 600px) {
+    .move-left, .move-right {
+        height: 800px;
+    }
+}  
+
 
 .move-left:hover, .move-right:hover {
     opacity: 1;
@@ -352,10 +361,11 @@ footer {
 @media only screen and (max-width: 600px) {
     footer {
         position: absolute;
-        bottom: 0;
+        top: 1620px;
         margin: 0px;
-        padding: 8vh;    
-        width: 100%;
+        width: 100vw;
+        height: 170px;
+        padding: 0;
     }
 }  
 
