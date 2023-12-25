@@ -48,11 +48,28 @@ document.addEventListener('DOMContentLoaded', function() {
     let touchStartX;
     let touchStartY;    
     let sliderContainer = document.querySelector('.slider-container');
+    let verticalSwipeThreshold = 15; // Adjust as needed
 
     sliderContainer.addEventListener('touchstart', function(e) {
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
     });
+
+    sliderContainer.addEventListener('touchmove', function(e) {
+        let touchEndX = e.touches[0].clientX;
+        let touchEndY = e.touches[0].clientY;
+    
+        let deltaX = touchEndX - touchStartX;
+        let deltaY = touchEndY - touchStartY;
+    
+        // Check if the swipe is predominantly vertical
+        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+          e.preventDefault(); // Prevent default vertical scrolling
+        }
+        touchStartX = touchEndX;
+        touchStartY = touchEndY;
+    });    
+    
   
     sliderContainer.addEventListener('touchend', function(e) {
       let touchEndX = e.changedTouches[0].clientX;
