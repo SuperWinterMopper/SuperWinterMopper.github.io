@@ -46,26 +46,34 @@ function linkHome() {
 document.addEventListener('DOMContentLoaded', function() {
     loadSongs();
     let touchStartX;
+    let touchStartY;    
     let sliderContainer = document.querySelector('.slider-container');
 
     sliderContainer.addEventListener('touchstart', function(e) {
       touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
     });
   
     sliderContainer.addEventListener('touchend', function(e) {
       let touchEndX = e.changedTouches[0].clientX;
-      handleSwipe(touchStartX, touchEndX);
-    });
+      let touchEndY = e.changedTouches[0].clientY;
+
+      let deltaX = touchEndX - touchStartX;
+      let deltaY = touchEndY - touchStartY;
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        handleSwipe(touchStartX, touchEndX);
+      }
+      });
   
     function handleSwipe(startX, endX) {
-      let swipeThreshold = 50; // Adjust as needed
+      let swipeThreshold = 25; // Adjust as needed
   
       if (endX > startX + swipeThreshold) {
         // Swipe to the right
-        moveSliderRight();
+        moveSliderLeft();
       } else if (endX < startX - swipeThreshold) {
         // Swipe to the left
-        moveSliderLeft();
+        moveSliderRight();
       }
     }
   });
