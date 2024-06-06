@@ -472,13 +472,14 @@ header #essential-albums {
     justify-content: center;
     color: rgb(124, 124, 124);
     font-size: .4em;
+    cursor: pointer;
 }
 
 .mobile-commentary {
     display: none;
     padding: 2vh;
     background-color: blue;
-    height: 20vh;
+    height: 50vh;
     width: 100%;
 }
 

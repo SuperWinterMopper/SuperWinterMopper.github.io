@@ -113,11 +113,13 @@ function moveSliderLeft() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const header = document.getElementsByClassName('mobile-description');
-    const content = document.getElementsByClassName('mobile-commentary');
+    const headers = document.getElementsByClassName('mobile-description');
 
-    header.addEventListener('click', function() {
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    Array.from(headers).forEach(header => {
+        header.addEventListener('click', function() {
+            const content = this.querySelector('.mobile-commentary');
+            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+        });
     });
 });
 
