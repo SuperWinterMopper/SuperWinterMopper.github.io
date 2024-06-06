@@ -392,6 +392,7 @@ header #essential-albums {
         flex-direction: column;
         width: 100vw;
         overflow-x: hidden;
+        position: relative;
     }
 }  
 
