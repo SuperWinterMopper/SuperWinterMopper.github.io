@@ -486,19 +486,19 @@ header #essential-albums {
 .mobile-commentary {
     max-height: 0;
     overflow: hidden;
-    padding: 0;
-    background-color: blue;
+    padding: 0; 
+    background-color: rgb(34, 34, 34);;
     width: 100%;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
 }
 
 .mobile-commentary.open {
     max-height: 40vh; /* Adjust this value based on your content's height */
-    padding: 5vw;
 }
 
 .mobile-commentary .mobile-commentary-text {
-    padding: 5vw;
+    padding: 1vh 8vw 1vh 8vw;
+
 }
 
 
