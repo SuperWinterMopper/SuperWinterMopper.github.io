@@ -432,13 +432,24 @@ header #essential-albums {
 .mobile-title_band_date {
     height: 12vh;
     width: 100vw;
-    background-color: cadetblue;
+    background-color: black;
     margin: 0;
 }
 
 .mobile-title_band_date .mobile-title, .mobile-title_band_date .mobile-bandname, .mobile-title_band_date .mobile-date {
     margin-top: 0;
+    margin-bottom: .5vh;
     width: 100%;
+    padding: 0 0 0 10vw;
+    color: white;
+}
+
+.mobile-title_band_date .mobile-title {
+    font-size: 2.2em;
+}
+
+.mobile-title_band_date .mobile-bandname,.mobile-title_band_date .mobile-date {
+    font-size: 1em;
 }
 
 .mobile-description {
