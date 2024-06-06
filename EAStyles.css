@@ -494,12 +494,12 @@ header #essential-albums {
 
 .mobile-commentary.open {
     height: 30vh; /* Adjust this value based on your content's height */
-    padding: 2vh;
+    padding: 5vw;
 }
 
-
-
-
+.mobile-commentary .mobile-commentary-text {
+    padding: 5vw;
+}
 
 
 
