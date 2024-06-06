@@ -397,16 +397,16 @@ header #essential-albums {
 
 .mobile-song {
     display: flex;
-    height: 40vh;
+    /* height: 40vh; */
     width: 100vw;
     flex-direction: column;
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
 }
 
-.mobile-song.open {
+/* .mobile-song.open {
     height: 88vh;
-}
+} */
 
 .mobile-number_cover {
     display: flex;
@@ -467,7 +467,7 @@ header #essential-albums {
 }
 
 .mobile-description {
-    height: 2vh;
+    /* height: 2vh; */
     width: 100vw;
     background-color: rgb(27, 27, 27);
     display: flex;
@@ -493,7 +493,7 @@ header #essential-albums {
 }
 
 .mobile-commentary.open {
-    height: 30vh; /* Adjust this value based on your content's height */
+    max-height: 40vh; /* Adjust this value based on your content's height */
     padding: 5vw;
 }
 
