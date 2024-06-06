@@ -494,7 +494,7 @@ header #essential-albums {
 }
 
 .mobile-commentary.open {
-    max-height: 40vh; /* Adjust this value based on your content's height */
+    max-height: 80vh; /* Adjust this value based on your content's height */
 }
 
 .mobile-commentary .mobile-commentary-text {
