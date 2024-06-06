@@ -463,7 +463,7 @@ header #essential-albums {
 }
 
 .mobile-description {
-    height: 10vh;
+    height: 200px;
     width: 100vw;
     background-color: rgb(27, 27, 27);
     display: flex;
