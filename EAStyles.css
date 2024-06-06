@@ -409,7 +409,7 @@ header #essential-albums {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 26vh;
+    height: 28vh;
     background-color: black;
     width: 100vw;
     padding: 5px;
@@ -434,7 +434,7 @@ header #essential-albums {
 }
 
 .mobile-title_band_date {
-    height: 12vh;
+    height: 10vh;
     width: 100vw;
     background-color: black;
     margin: 0;
@@ -458,7 +458,7 @@ header #essential-albums {
 }
 
 .mobile-title_band_date .mobile-bandname,.mobile-title_band_date .mobile-date {
-    font-size: 1em;
+    font-size: .9em;
 }
 
 .mobile-description {
