@@ -117,8 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Array.from(headers).forEach(header => {
         header.addEventListener('click', function() {
+            const containersong = this.closest('.mobile-song');
             const content = this.querySelector('.mobile-commentary');
-            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+            content.classList.toggle('open');
+            this.classList.toggle('open');
+            containersong.classList.toggle('open');
         });
     });
 });

@@ -404,6 +404,10 @@ header #essential-albums {
     font-optical-sizing: auto;
 }
 
+.mobile-song.open {
+    height: 88vh;
+}
+
 .mobile-number_cover {
     display: flex;
     flex-direction: row;
@@ -470,17 +474,28 @@ header #essential-albums {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: rgb(124, 124, 124);
+    color: rgb(124,  124, 124);
     font-size: .4em;
     cursor: pointer;
 }
 
-.mobile-commentary {
-    display: none;
-    padding: 2vh;
-    background-color: blue;
+.mobile-description.open {
     height: 50vh;
+}
+
+
+.mobile-commentary {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    background-color: blue;
     width: 100%;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.mobile-commentary.open {
+    max-height: 50vh; /* Adjust this value based on your content's height */
+    padding: 2vh;
 }
 
 
