@@ -400,6 +400,8 @@ header #essential-albums {
     height: 40vh;
     width: 100vw;
     flex-direction: column;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .mobile-number_cover {
@@ -415,10 +417,12 @@ header #essential-albums {
 
 .mobile-number_cover .mobile-entry-number {
     font-size: 5em;
-    font-style: bold;
     color: white;
     /* padding: 0 5vw 0 5vw; */
     margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
 }
 
 .mobile-number_cover .mobile-coverart {
