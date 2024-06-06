@@ -489,7 +489,8 @@ header #essential-albums {
     padding: 0; 
     background-color: rgb(34, 34, 34);;
     width: 100%;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    color: rgb(170, 170, 170);
 }
 
 .mobile-commentary.open {
@@ -498,7 +499,8 @@ header #essential-albums {
 
 .mobile-commentary .mobile-commentary-text {
     padding: 1vh 8vw 1vh 8vw;
-
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
