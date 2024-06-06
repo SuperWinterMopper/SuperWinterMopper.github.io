@@ -434,7 +434,7 @@ header #essential-albums {
 }
 
 .mobile-title_band_date {
-    height: 12vh;
+    height: 13vh;
     width: 100vw;
     background-color: black;
     margin: 0;
@@ -457,7 +457,7 @@ header #essential-albums {
 }
 
 .mobile-description {
-    height: 3vh;
+    height: 2vh;
     width: 100vw;
     background-color: rgb(27, 27, 27);
     display: flex;
@@ -465,6 +465,7 @@ header #essential-albums {
     align-items: center;
     justify-content: center;
     color: rgb(124, 124, 124);
+    font-size: .4em;
 }
 
 
