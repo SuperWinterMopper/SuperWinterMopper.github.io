@@ -386,7 +386,7 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .mobile-albums {
-        background-color: orange;   
+        background-color: black;   
         height: 4000vh;  
         display: flex;
         flex-direction: column;
@@ -413,6 +413,7 @@ header #essential-albums {
     background-color: black;
     width: 100vw;
     padding: 5px;
+    border-color: none;
 }
 
 .mobile-number_cover .mobile-entry-number {
@@ -509,7 +510,6 @@ footer {
 
 @media only screen and (max-width: 600px) {
     footer {
-        position: absolute;
         top: 1620px;
         margin: 0px;
         width: 100vw;
