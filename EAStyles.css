@@ -391,6 +391,7 @@ header #essential-albums {
         display: flex;
         flex-direction: column;
         width: 100vw;
+        overflow-x: hidden;
     }
 }  
 
@@ -403,6 +404,9 @@ header #essential-albums {
 
 .mobile-number_cover {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     height: 25vh;
     background-color: black;
     width: 100vw;
@@ -413,23 +417,38 @@ header #essential-albums {
     font-size: 5em;
     font-style: bold;
     color: white;
+    /* padding: 0 5vw 0 5vw; */
+    margin: 0;
 }
 
 .mobile-number_cover .mobile-coverart {
     width: 180px;
     height: 180px;
+    /* padding: 0 10vw 0 5vw; */
+    margin: 0;
+
 }
 
 .mobile-title_band_date {
     height: 12vh;
     width: 100vw;
     background-color: cadetblue;
+    margin: 0;
+}
+
+.mobile-title_band_date .mobile-title, .mobile-title_band_date .mobile-bandname, .mobile-title_band_date .mobile-date {
+    margin-top: 0;
+    width: 100%;
 }
 
 .mobile-description {
     height: 3vh;
     width: 100vw;
     background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
