@@ -474,7 +474,13 @@ header #essential-albums {
     font-size: .4em;
 }
 
-
+.mobile-commentary {
+    display: none;
+    padding: 2vh;
+    background-color: blue;
+    height: 20vh;
+    width: 100%;
+}
 
 
 

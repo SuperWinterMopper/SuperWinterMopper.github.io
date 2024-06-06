@@ -1,6 +1,5 @@
 let counter = 0;
 let currentPosition = 0;
-let counter2 = 1;
 const numberName = document.querySelector(".number-name");
 
 function slideButton() {    
@@ -113,7 +112,18 @@ function moveSliderLeft() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementsByClassName('mobile-description');
+    const content = document.getElementsByClassName('mobile-commentary');
+
+    header.addEventListener('click', function() {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+});
+
+
 function loadSongs() {
+    let counter2 = 1;
     fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRUSMvEQ88V3TJ-Czntq-02RwryeStduQjtpJ3lDGOL7sii1G0U8o_JNqYrwlTdWp0ecD6wj0gICFvu/pub?gid=881276312&single=true&output=csv')
     .then(response => response.text())
     .then(data => {
@@ -152,6 +162,37 @@ function loadSongs() {
                         document.querySelector("#song-title" + counterString).style.fontSize = fontSize + "px";
                         counter2++;
                     }
+                });
+            },
+            error: function (error) {
+                console.error('Error parsing CSV:', error.message);
+            },
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+    
+    let counter3 = 1;
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRUSMvEQ88V3TJ-Czntq-02RwryeStduQjtpJ3lDGOL7sii1G0U8o_JNqYrwlTdWp0ecD6wj0gICFvu/pub?gid=881276312&single=true&output=csv')
+    .then(response => response.text())
+    .then(data => {
+        Papa.parse(data, {
+            header: true, 
+            dynamicTyping: true, 
+            complete: function (results) {
+                results.data.forEach(row => {
+                }
+                )
+                
+                results.data.forEach(row => {
+                    let counterString = counter3.toString();
+                    document.querySelector("#mobile-coverart" + counterString).src = row['Cover'];
+                    document.querySelector("#mobile-bandname" + counterString).textContent = row['Artist'];
+                    document.querySelector("#mobile-date" + counterString).textContent = row['Date'];
+                    document.querySelector("#mobile-commentary" + counterString).textContent = row['Commentary'];
+                    document.querySelector("#mobile-title" + counterString).textContent = row['Title'];
+                    counter3++;
                 });
             },
             error: function (error) {
