@@ -409,7 +409,7 @@ header #essential-albums {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 25vh;
+    height: 26vh;
     background-color: black;
     width: 100vw;
     padding: 5px;
@@ -426,15 +426,15 @@ header #essential-albums {
 }
 
 .mobile-number_cover .mobile-coverart {
-    width: 180px;
-    height: 180px;
+    width: 23vh;
+    height: 23vh;
     /* padding: 0 10vw 0 5vw; */
     margin: 0;
 
 }
 
 .mobile-title_band_date {
-    height: 13vh;
+    height: 12vh;
     width: 100vw;
     background-color: black;
     margin: 0;
@@ -449,8 +449,7 @@ header #essential-albums {
 }
 
 .mobile-title_band_date .mobile-title {
-    font-size: 2.2em;
-    font-size: clamp(11px, 2vw, 36px); /* Adjust as necessary */
+    font-size: clamp(1em, 1.2em, 1.3em); /* Adjust as necessary */
     max-width: 90%; /* Or a specific max-width */
     white-space: nowrap;
     overflow: hidden;
