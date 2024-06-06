@@ -327,10 +327,7 @@ header #essential-albums {
 
 @media only screen and (max-width: 600px) {
     .slider-parent {
-        width: 100vw;
-        height: 800px;
-        position: relative;
-        overflow-x: hidden;
+        display: none;
     }
 }  
 
@@ -367,6 +364,97 @@ header #essential-albums {
     top: 0;
     right: 0;
 }
+
+.mobile-albums {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .mobile-albums {
+        background-color: orange;   
+        height: 4000vh;  
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+}  
+
+.mobile-song {
+    display: flex;
+    height: 40vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.mobile-number_cover {
+    display: flex;
+    height: 25vh;
+    background-color: black;
+    width: 100vw;
+    padding: 5px;
+}
+
+.mobile-number_cover .mobile-entry-number {
+    font-size: 5em;
+    font-style: bold;
+    color: white;
+}
+
+.mobile-number_cover .mobile-coverart {
+    width: 180px;
+    height: 180px;
+}
+
+.mobile-title_band_date {
+    height: 12vh;
+    width: 100vw;
+    background-color: cadetblue;
+}
+
+.mobile-description {
+    height: 3vh;
+    width: 100vw;
+    background-color: bisque;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     background-color: rgb(58, 58, 58);
