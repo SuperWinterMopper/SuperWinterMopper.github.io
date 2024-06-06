@@ -387,7 +387,6 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .mobile-albums {
         background-color: black;   
-        height: 4000vh;  
         display: flex;
         flex-direction: column;
         width: 100vw;
