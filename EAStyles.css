@@ -450,7 +450,7 @@ header #essential-albums {
 
 .mobile-title_band_date .mobile-title {
     font-size: 2.2em;
-    font-size: clamp(12px, 2vw, 36px); /* Adjust as necessary */
+    font-size: clamp(11px, 2vw, 36px); /* Adjust as necessary */
     max-width: 90%; /* Or a specific max-width */
     white-space: nowrap;
     overflow: hidden;
