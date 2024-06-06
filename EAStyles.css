@@ -459,11 +459,12 @@ header #essential-albums {
 .mobile-description {
     height: 3vh;
     width: 100vw;
-    background-color: bisque;
+    background-color: rgb(27, 27, 27);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: rgb(124, 124, 124);
 }
 
 
