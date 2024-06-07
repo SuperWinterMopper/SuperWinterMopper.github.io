@@ -17,6 +17,12 @@ header {
     height: 8vh;
 }
 
+@media only screen and (max-width: 600px) {
+    .header-edge {
+        width: 2vw;
+    }
+}  
+
 header button {
     background-color: rgb(58, 58, 58);
     padding: calc(.5vh) calc(2vh) calc(.5vh) calc(2vh);
@@ -29,6 +35,13 @@ header button {
     color: rgb(172, 172, 172);
     font-family: 'Inter', sans-serif;
 }
+
+@media only screen and (max-width: 600px) {
+    header button {
+        font-size: .6em;
+    }
+}  
+
 
 header button::before {
     content: "";
@@ -76,11 +89,39 @@ header #essential-albums {
     justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .main-screen {
+        background-position: 25% 0;
+        height: 820px;
+    }
+}  
+
+
 .main-screen .big-title {
     padding-top: 130px;
     font-family: 'Nunito', sans-serif;
     font-family: 'Nunito Sans', sans-serif;    
 }
+
+
+@media only screen and (max-width: 600px) {
+    .main-screen .big-title {
+        padding-top: 50px;
+    }
+}  
+
+@media only screen and (max-width: 600px) {
+    .main-screen .big-title h2 {
+        margin-top: -50px;
+    }
+}  
+
+@media only screen and (max-width: 600px) {
+    .main-screen .big-title h1, .main-screen .big-title h2 {
+        font-size: 3em;
+        line-height: 1.5;
+    }
+}  
 
 .main-screen .big-title h1{
     font-size: 5em;
@@ -98,6 +139,13 @@ header #essential-albums {
     text-align: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .exposition {
+        height: 90vh;
+    }
+}  
+
 
 .exposition::before {
     content: "";
@@ -122,6 +170,18 @@ header #essential-albums {
     font-size: large;
 }
 
+@media only screen and (max-width: 600px) {
+    .exposition-text {
+        padding-top: -20vh;
+        line-height: 1.5;
+        font-size: 1em;
+        max-width: 80vw;
+        height: 80vh;
+        position: relative;
+    }
+}  
+
+
 .slider-container {
     width: 10000vw;
     height: 100vh;
@@ -129,6 +189,12 @@ header #essential-albums {
     position: relative;
     transition: transform .5s ease-in-out;
 }
+
+@media only screen and (max-width: 600px) {
+    .slider-container {
+        height: 800px;
+        }
+}  
 
 .song {
     width: 100vw;
@@ -250,6 +316,16 @@ footer {
     text-align: center;
     padding: 8vh;
 }
+
+@media only screen and (max-width: 600px) {
+    footer {
+        /* top: 1620px; */
+        margin: 0px;
+        height: 10vh;
+        padding: 4vh;
+    }
+}  
+
 
 #Default {
     background: rgb(144,144,144);
