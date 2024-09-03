@@ -73,6 +73,23 @@ header #Home {
     margin-right: auto;
 }
 
+header #Home:hover {
+    margin-right: auto;
+}
+
+header #Home img{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+}
+
+header #Home:hover img{
+    filter: brightness(0) invert(1);
+}
+
+
 header #essential-albums {
     margin-left: 3vw;   
 }
@@ -369,21 +386,6 @@ header #essential-albums {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 600px) {
     .mobile-albums {
         background-color: black;   
@@ -502,24 +504,6 @@ header #essential-albums {
     font-size: 3em;
     font-family: 'Ubuntu', sans-serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     background-color: rgb(58, 58, 58);

@@ -57,7 +57,7 @@ header button::before {
 }
 
 header button:hover::before {
-    width: 100%; 
+    width: 100%;    
     color: rgb(235, 235, 235);
 }
   
@@ -67,6 +67,22 @@ header button:hover {
 
 header #Home {
     margin-right: auto;
+}
+
+header #Home:hover {
+    margin-right: auto;
+}
+
+header #Home img{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+}
+
+header #Home:hover img{
+    filter: brightness(0) invert(1);
 }
 
 header #essential-albums {
@@ -79,8 +95,8 @@ header #essential-albums {
 }
 
 .main-screen {
-    background-image: url("steven_studio_photo.webp");
-    background-size: cover;
+    background: rgb(52,52,52);
+    background: linear-gradient(90deg, rgba(52,52,52,1) 8%, rgba(16,16,16,1) 100%);    
     height: 105vh;
     margin-top: -4px;
     color: white;
@@ -92,7 +108,7 @@ header #essential-albums {
 @media only screen and (max-width: 600px) {
     .main-screen {
         background-position: 25% 0;
-        height: 820px;
+        height: 570px;
     }
 }  
 
@@ -110,23 +126,17 @@ header #essential-albums {
     }
 }  
 
-@media only screen and (max-width: 600px) {
-    .main-screen .big-title h2 {
-        margin-top: -50px;
-    }
-}  
-
-@media only screen and (max-width: 600px) {
-    .main-screen .big-title h1, .main-screen .big-title h2 {
-        font-size: 3em;
-        line-height: 1.5;
-    }
-}  
-
 .main-screen .big-title h1{
     font-size: 5em;
     font-weight: 200;
 }
+
+@media only screen and (max-width: 600px) {
+    .main-screen .big-title h1 {
+        line-height: 2;
+        font-size: 3em;
+    }
+}  
 
 .exposition {
     background-image: url("https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F03258730-60e1-11eb-8bcc-6c1a7cf205dd.jpg?crop=7676%2C4318%2C237%2C1073&resize=1500");
@@ -136,19 +146,20 @@ header #essential-albums {
     color: white;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: center; 
     justify-content: center;
+    position: relative;
 }
 
 @media only screen and (max-width: 600px) {
     .exposition {
-        height: 90vh;
+        height: 500px;
     }
 }  
 
-
 .exposition::before {
     content: "";
+    position: absolute;
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.8);   
@@ -170,7 +181,7 @@ header #essential-albums {
     font-size: large;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .exposition-text {
         padding-top: -20vh;
         line-height: 1.5;
@@ -179,8 +190,24 @@ header #essential-albums {
         height: 80vh;
         position: relative;
     }
-}  
+}   */
 
+@media only screen and (max-width: 600px) {
+    .exposition-text {
+        padding-top: 4vh;
+        font-size: .8em;
+        max-width: 80vw;
+        height: auto; /* Adjust to fit content */
+        padding-left: 10vw; /* Center text better on mobile */
+        line-height: 2.5;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .inner-explanation {
+        padding-bottom: 18px;
+    }
+}
 
 .slider-container {
     width: 10000vw;
@@ -204,21 +231,78 @@ header #essential-albums {
     position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+    .song {
+        height: 800px;
+        max-height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden; 
+        position: relative;
+    }
+}  
+
+.song .entry-number-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .song .entry-number-mobile{
+        display: flex;
+        font-size: 40px;
+        margin: 0;
+        padding-top: 10px;
+    }
+}  
+
 .song img{
     width: 400px;
     height: 400px;
     margin: 80px 0 0 8vw; 
 }
 
+@media only screen and (max-width: 600px) {
+    .song img{
+        width: 330px;
+        height: 330px;
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);   
+        margin: 0;  
+    }
+}  
+
 .song-info {
     padding-left: 3vw;
     padding-right: 3vw;
 }
 
+@media only screen and (max-width: 600px) {
+    .song-info {
+        position: absolute;
+        top: 450px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;   
+        width: 330px;
+    }
+}  
+
 .song .song-info .song-title {
     padding-left: 2vw;
     font-size: 66px;
 }
+
+@media only screen and (max-width: 600px) {
+    .song .song-info .song-title {
+        padding: 0vw;
+        font-size: 33px;
+        margin-bottom: -10px;
+        padding-left: 0vw;
+    }
+}  
 
 .song .number-name {
     margin-top: 80px;
@@ -227,6 +311,20 @@ header #essential-albums {
     margin-bottom: 4vh;
     padding-top: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .song .number-name {
+        font-size: 40px;
+        margin-top: -15px;
+        margin-bottom: 34px;
+    }
+}  
+
+@media only screen and (max-width: 600px) {
+    .song .number-name .entry-number-desktop{
+        display: none;
+    }
+} 
 
 .song a {
     position: relative;
@@ -263,21 +361,51 @@ header #essential-albums {
     margin-bottom: 4vh;
 }
 
+@media only screen and (max-width: 600px) {
+    .song .location {
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+}  
+
 .song .date {
     font-size: 2em;
     margin-top: 0;
 }
+
+@media only screen and (max-width: 600px) {
+    .song .date {
+        font-size: 22px;
+    }
+}  
 
 .song .commentary {
     margin: 10vh 5vw 0 2vw;
     font-size: 1.5em;
 }
 
+@media only screen and (max-width: 600px) {
+    .song .commentary {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 330;
+        margin: 0px;
+    }
+}  
+
 .slider-parent {
     width: 100vw;
     height: 100vh;
     position: relative;
 }
+
+@media only screen and (max-width: 600px) {
+    .slider-parent {
+        display: none;
+    }
+}  
 
 .move-left, .move-right {
     background-color: transparent;
@@ -291,6 +419,12 @@ header #essential-albums {
     height: 100%;
     position: absolute;
 }
+
+@media only screen and (max-width: 600px) {
+    .move-left, .move-right {
+        display: none;
+    }
+}  
 
 .move-left:hover, .move-right:hover {
     opacity: 1;
@@ -307,6 +441,125 @@ header #essential-albums {
     right: 0;
 }
 
+.mobile-albums {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-albums {
+        display: flex;
+        background-color: black;   
+        flex-direction: column;
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+    }
+}  
+
+.mobile-song {
+    display: flex;
+    /* height: 40vh; */
+    width: 100vw;
+    flex-direction: column;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.mobile-number_cover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 28vh;
+    background-color: black;
+    width: 100vw;
+    padding: 5px;
+    border-color: none;
+}
+
+.mobile-number_cover .mobile-entry-number {
+    font-size: 5em;
+    color: white;
+    /* padding: 0 5vw 0 5vw; */
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+}
+
+.mobile-number_cover .mobile-coverart {
+    width: 23vh;
+    height: 23vh;
+    /* padding: 0 10vw 0 5vw; */
+    margin: 0;
+
+}
+
+.mobile-title_band_date {
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0;
+}
+
+.mobile-title_band_date .mobile-title, .mobile-title_band_date .mobile-bandname, .mobile-title_band_date .mobile-date {
+    margin-top: 0;
+    margin-bottom: .5vh;
+    width: 100%;
+    padding: 0 0 0 10vw;
+    color: white;
+}
+
+.mobile-title_band_date .mobile-title {
+    font-size: clamp(1em, 1.2em, 1.3em); /* Adjust as necessary */
+    max-width: 90%; /* Or a specific max-width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Optional: to show '...' if text is cut off */
+    display: block; /* Ensure it's block or inline-block for proper sizing */
+}
+
+.mobile-title_band_date .mobile-bandname,.mobile-title_band_date .mobile-date {
+    font-size: .9em;
+}
+
+.mobile-description {
+    /* height: 2vh; */
+    width: 100vw;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(124,  124, 124);
+    font-size: .4em;
+    cursor: pointer;
+}
+
+.mobile-description.open {
+    align-items: center;
+}
+
+.mobile-commentary {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0; 
+    background-color: rgb(34, 34, 34);;
+    width: 100%;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    color: rgb(170, 170, 170);
+}
+
+.mobile-commentary.open {
+    max-height: 80vh; /* Adjust this value based on your content's height */
+}
+
+.mobile-commentary .mobile-commentary-text {
+    padding: 1vh 8vw 1vh 8vw;
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 footer {
     background-color: rgb(58, 58, 58);
     margin: -16px;
@@ -319,34 +572,13 @@ footer {
 
 @media only screen and (max-width: 600px) {
     footer {
-        /* top: 1620px; */
         margin: 0px;
         height: 10vh;
         padding: 4vh;
     }
 }  
 
-
 #Default {
     background: rgb(144,144,144);
     background: linear-gradient(330deg, rgba(144,144,144,0.8464635854341737) 8%, rgba(113,113,113,0.756827731092437) 38%, rgba(209,209,209,1) 100%);
-}
-
-#TheSkyMoveSideways {
-    background: rgb(124,149,255);
-    background: linear-gradient(90deg, rgba(124,149,255,1) 13%, rgba(45,216,230,1) 100%);
-}
-
-#Insurgentes {
-    background: rgb(230,175,205);
-    background: linear-gradient(180deg, rgba(230,175,205,1) 22%, rgba(148,187,233,1) 100%);
-}
-
-#FearOfABlankPlanet {
-    background: rgb(40,79,196);
-    background: linear-gradient(60deg, rgba(40,79,196,1) 8%, rgba(139,106,185,1) 100%, rgba(7,60,144,1) 100%);
-}
-
-#StupidDream {
-    background: rgb(34,193,195); background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(1,179,96,1) 100%, rgba(1,179,96,1) 100%);
 }
